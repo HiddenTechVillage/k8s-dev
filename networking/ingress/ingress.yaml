@@ -8,7 +8,6 @@ metadata:
     networking.gke.io/frontend-config: https-redirect
 spec:
   rules:
-  # Subdomain (ArgoCD needs this)
   - host: argocd.matcham-k8s.dev
     http:
       paths:
@@ -20,7 +19,6 @@ spec:
             port:
               number: 80
 
-  # Main domain with path-based routing
   - host: matcham-k8s.dev
     http:
       paths:
@@ -29,12 +27,5 @@ spec:
         backend:
           service:
             name: base-application
-            port:
-              number: 80
-      - path: /another-app
-        pathType: Prefix
-        backend:
-          service:
-            name: another-app
             port:
               number: 80
