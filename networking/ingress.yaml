@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: platform-ingress
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+    networking.gke.io/managed-certificates: matcham-cert
+    networking.gke.io/frontend-config: https-redirect
+spec:
+  rules:
+  # Subdomain (ArgoCD needs this)
+  - host: argocd.matcham-k8s.dev
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd-server
+            port:
+              number: 80
+
+  # Main domain with path-based routing
+  - host: matcham-k8s.dev
+    http:
+      paths:
+      - path: /base-application
+        pathType: Prefix
+        backend:
+          service:
+            name: base-application
+            port:
+              number: 80
+      - path: /another-app
+        pathType: Prefix
+        backend:
+          service:
+            name: another-app
+            port:
+              number: 80
