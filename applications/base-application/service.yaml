@@ -6,7 +6,11 @@ spec:
   selector:
     app: base-application
   ports:
-  - protocol: TCP
+  - name: https
+    protocol: TCP
     port: 443
     targetPort: 5000
-
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 5000
