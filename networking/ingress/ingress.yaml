@@ -7,6 +7,7 @@ metadata:
     networking.gke.io/managed-certificates: matcham-cert
     networking.gke.io/frontend-config: https-redirect
 spec:
+  ingressClassName: "gce"
   rules:
   - host: matcham-k8s.dev
     http:
