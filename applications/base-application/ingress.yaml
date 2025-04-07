@@ -10,7 +10,7 @@ spec:
   - host: matcham-k8s.dev
     http:
       paths:
-      - path: applications/base-application
+      - path: /base-application
         pathType: Prefix
         backend:
           service:
