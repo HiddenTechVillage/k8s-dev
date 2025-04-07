@@ -4,6 +4,8 @@ metadata:
   name: base-application
   annotations:
     kubernetes.io/ingress.class: "gce"
+    networking.gke.io/managed-certificates: matcham-cert
+    networking.gke.io/frontend-config: https-redirect
 spec:
   rules:
   - host: matcham-k8s.dev
