@@ -13,4 +13,4 @@ spec:
       releaseName: vault
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: kubeseal
+    namespace: vault
