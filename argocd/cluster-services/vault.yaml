@@ -4,6 +4,9 @@ metadata:
   name: vault
   namespace: argocd
 spec:
+  metadata:
+    finalizers:
+      - resources-finalizer.argocd.argoproj.io
   project: default
   source:
     chart: vault

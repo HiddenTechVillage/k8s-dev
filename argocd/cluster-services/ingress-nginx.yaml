@@ -4,6 +4,9 @@ metadata:
   name: ingress-nginx
   namespace: argocd
 spec:
+  metadata:
+    finalizers:
+      - resources-finalizer.argocd.argoproj.io
   project: default
   destination:
     server: "https://kubernetes.default.svc"
