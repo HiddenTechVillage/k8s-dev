@@ -8,7 +8,7 @@ spec:
   source:
       repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
       targetRevision: HEAD
-      path: cluster-services/argocd-ingress.yaml
+      path: argocd/cluster-services/argocd-ingress.yaml
   destination:
       server: https://kubernetes.default.svc
       namespace: argocd
