@@ -20,5 +20,10 @@ spec:
         env:
         - name: APP_MESSAGE
           value: "Test Application"
+        - name: SECRET
+          valueFrom:
+            secretKeyRef:
+              name: bitwarden
+              key: test
 
 
