@@ -10,7 +10,7 @@ spec:
     namespace: postgres
   source:
     chart: postgresql
-    repoURL: https://charts.bitnami.com/bitnami
+    repoURL: oci://registry-1.docker.io/bitnamicharts
     targetRevision: 16.6.3
     helm:
       releaseName: postgresql
