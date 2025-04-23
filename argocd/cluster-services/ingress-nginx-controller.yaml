@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ingress-nginx
+  name: ingress-nginx-controller
   namespace: argocd
 spec:
   metadata:
@@ -12,9 +12,9 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: ingress-nginx
   source:
-    chart: ingress-nginx
-    repoURL: https://kubernetes.github.io/ingress-nginx
-    targetRevision: 4.12.1
+    chart: nginx-stable/nginx-ingress
+    repoURL: https://helm.nginx.com/stable
+    targetRevision: 2.1.0
     helm:
       releaseName: ingress-nginx
   syncPolicy:
