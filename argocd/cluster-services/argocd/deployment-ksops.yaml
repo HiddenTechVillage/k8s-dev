@@ -7,11 +7,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: argocd-repo-server
+      app.kubernetes.io/name: argocd-repo-server	
   template:
     metadata:
       labels:
-        app: argocd-repo-server
+        app.kubernetes.io/component: repo-server	
+        app.kubernetes.io/name: argocd-repo-server	
+        app.kubernetes.io/part-of: argocd
     spec:
       # 1. Define an emptyDir volume which will hold the custom binaries
       volumes:
