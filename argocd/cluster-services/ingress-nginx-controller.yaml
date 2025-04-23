@@ -4,9 +4,6 @@ metadata:
   name: ingress-nginx-controller
   namespace: argocd
 spec:
-  metadata:
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
   project: default
   destination:
     server: "https://kubernetes.default.svc"
@@ -17,9 +14,16 @@ spec:
     targetRevision: 4.12.1
     helm:
       releaseName: ingress-nginx
+      values: |
+        controller:
+          service:
+            type: NodePort
+            nodePorts:
+              http: 30080
+              https: 30443
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
     automated:
       selfHeal: true
       prune: true
