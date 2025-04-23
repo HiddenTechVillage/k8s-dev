@@ -14,15 +14,6 @@ spec:
     targetRevision: 16.6.3
     helm:
       releaseName: postgresql
-      values: |
-        auth:
-          username: myuser
-          password: mypassword
-          database: mydb
-        primary:
-          persistence:
-            enabled: true
-            size: 8Gi
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
