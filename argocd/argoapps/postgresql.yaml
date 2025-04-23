@@ -9,9 +9,9 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: postgres
   source:
-    repoURL: https://charts.bitnami.com/bitnami
+    repoURL: oci://registry-1.docker.io/bitnamicharts
     chart: postgresql
-    targetRevision: latest
+    targetRevision: 16.6.3
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
