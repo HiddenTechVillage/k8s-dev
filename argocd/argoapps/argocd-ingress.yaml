@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-      repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
+      repoURL: https://github.com/HiddenTechVillage/k8s-dev/argocd/cluster-services.git
       targetRevision: HEAD
-      path: argocd/cluster-services/argocd-ingress.yaml
+      path: argocd-ingress
   destination:
       server: https://kubernetes.default.svc
       namespace: argocd
