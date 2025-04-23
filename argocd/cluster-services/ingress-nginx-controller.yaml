@@ -12,8 +12,8 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: ingress-nginx
   source:
-    chart: nginx-stable/nginx-ingress
-    repoURL: https://github.com/nginxinc/helm-charts
+    chart: nginx-ingress
+    repoURL: https://github.com/nginxinc/helm-charts/nginx-stable
     targetRevision: 2.1.0
     helm:
       releaseName: ingress-nginx
