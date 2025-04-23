@@ -20,3 +20,7 @@ spec:
             name: argocd-server
             port:
               name: https
+  tls:
+  - hosts:
+    - argocd.local
+    secretName: argocd-server-tls # as expected by argocd-server
