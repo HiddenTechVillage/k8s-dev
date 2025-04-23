@@ -13,7 +13,7 @@ spec:
     namespace: ingress-nginx
   source:
     chart: nginx-ingress
-    repoURL: https://helm.nginx.com/stable/nginx-stable
+    repoURL: https://helm.nginx.com/stable
     targetRevision: 2.1.0
     helm:
       releaseName: ingress-nginx
