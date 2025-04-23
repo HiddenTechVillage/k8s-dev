@@ -16,6 +16,8 @@ spec:
       releaseName: ingress-nginx
       values: |
         controller:
+          scope:
+            enabled: false
           service:
             type: NodePort
             nodePorts:
