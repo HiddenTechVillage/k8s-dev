@@ -9,8 +9,8 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: postgres
   source:
-    chart: bitnami/postgresql
-    repoURL: https://charts.bitnami.com/bitnami
+    chart: postgresql
+    repoURL: oci://registry-1.docker.io/bitnamicharts/
     targetRevision: 16.3.2
     helm:
       releaseName: postgresql
