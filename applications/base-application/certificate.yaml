@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: base-application-tls
+  namespace: default
+spec:
+  secretName: base-application-tls
+  commonName: baseapp.local
+  dnsNames:
+    - baseapp.local
+  issuerRef:
+    name: ca-issuer
+    kind: ClusterIssuer
