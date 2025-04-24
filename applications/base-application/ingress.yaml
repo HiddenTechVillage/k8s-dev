@@ -10,7 +10,7 @@ spec:
   ingressClassName: nginx
   rules:
   - host: baseapp.local
-    http:
+    https:
       paths:
       - path: /
         pathType: Prefix

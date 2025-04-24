@@ -16,16 +16,16 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: homepage.local
-      http:
-        paths:
-        - path: "/"
-          pathType: Prefix
-          backend:
-            service:
-              name: homepage
-              port:
-                name: https
+  - host: homepage.local
+    https:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: homepage
+          port:
+            number: 443
   tls:
   - hosts:
     - homepage.local
