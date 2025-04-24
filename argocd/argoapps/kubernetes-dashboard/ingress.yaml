@@ -18,7 +18,7 @@ spec:
           service:
             name: kubernetes-dashboard-kong-proxy
             port:
-              number: 8000
+              number: 443
   tls:
   - hosts:
     - kubernetes-dashboard.local
