@@ -24,8 +24,8 @@ spec:
         backend:
           service:
             name: homepage
-          port:
-            number: 443
+            port:
+              number: 443
   tls:
   - hosts:
     - homepage.local
