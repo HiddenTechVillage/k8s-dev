@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: base-application
+  name: test-application
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: base-application
+      app: test-application
   template:
     metadata:
       labels:
-        app: base-application
+        app: test-application
     spec:
       containers:
-      - name: base-application
+      - name: test-application
         image: matcham89/app:latest
         ports:
         - containerPort: 5000
