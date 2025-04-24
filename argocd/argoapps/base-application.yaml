@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: base-application
+  name: test-application
   namespace: argocd
 spec:
   project: default
   source:
       repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
       targetRevision: HEAD
-      path: applications/base-application
+      path: applications/test-application
   destination:
       server: https://kubernetes.default.svc
       namespace: default
