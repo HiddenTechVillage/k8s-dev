@@ -19,13 +19,13 @@ spec:
     - host: homepage.local
       http:
         paths:
-          - path: "/"
-            pathType: Prefix
-            backend:
-              service:
-                name: homepage
-                port:
-                  number: 443
+        - path: "/"
+          pathType: Prefix
+          backend:
+            service:
+              name: homepage
+              port:
+                name: https
   tls:
   - hosts:
     - homepage.local
