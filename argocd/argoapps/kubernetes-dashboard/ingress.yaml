@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: dashboard-ingress
+  name: kubernetes-dashboard-ingress
   namespace: default
   annotations:
     cert-manager.io/cluster-issuer: ca-issuer
@@ -9,17 +9,17 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: dashboard.local
+  - host: kubernetes-dashboard.local
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: dashboard-kubernetes-dashboard-web
+            name: kubernetes-dashboard-kong-proxy
             port:
               number: 8000
   tls:
   - hosts:
-    - dashboard.local
-    secretName: dashboard-tls
+    - kubernetes-dashboard.local
+    secretName: kubernetes-dashboard-tls

@@ -1,13 +1,13 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: dashboard-tls
+  name: kubernetes-dashboard-tls
   namespace: kubernetes-dashboard
 spec:
-  secretName: dashboard-tls
-  commonName: dashboard.local
+  secretName: kubernetes-dashboard-tls
+  commonName: kubernetes-dashboard.local
   dnsNames:
-    - dashboard.local
+    - kubernetes-dashboard.local
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer
