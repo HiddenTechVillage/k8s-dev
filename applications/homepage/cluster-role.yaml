@@ -45,5 +45,3 @@ rules:
     verbs:
       - get
       - list
----
-apiVersi
