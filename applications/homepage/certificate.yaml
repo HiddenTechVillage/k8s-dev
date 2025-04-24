@@ -7,7 +7,7 @@ spec:
   secretName: homepage-tls
   commonName: homepage.local
   dnsNames:
-    - baseapp.local
+    - homepage.local
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer
