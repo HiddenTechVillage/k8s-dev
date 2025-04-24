@@ -17,7 +17,7 @@ spec:
   ingressClassName: nginx
   rules:
   - host: homepage.local
-    https:
+    http:
       paths:
       - path: "/"
         pathType: Prefix
