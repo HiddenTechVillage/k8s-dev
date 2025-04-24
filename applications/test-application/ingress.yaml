@@ -22,4 +22,4 @@ spec:
   tls:
   - hosts:
     - testapp.local
-    secretName: base-application-tls
+    secretName: test-application-tls
