@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: homepage-tls
+  namespace: default
+spec:
+  secretName: homepage-tls
+  commonName: homepage.local
+  dnsNames:
+    - baseapp.local
+  issuerRef:
+    name: ca-issuer
+    kind: ClusterIssuer
