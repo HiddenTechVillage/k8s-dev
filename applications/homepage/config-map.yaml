@@ -21,7 +21,7 @@ data:
         - Github:
             - abbr: GH
               href: https://github.com/
-        - Blog:
+        - Personal Blog:
             - abbr: BG
               href: https://chrismatcham.dev/
   services.yaml: |
@@ -36,9 +36,9 @@ data:
             description: Super Basic App
 
     - Monitoring:
-        - My Third Service:
+        - Kubernetes Dashboard:
             href: https://kubernetes-dashboard.local:30443/
-            description: K8s Dashboard
+            description: Super Simple K8s Dashboard
   widgets.yaml: |
     - kubernetes:
         cluster:
