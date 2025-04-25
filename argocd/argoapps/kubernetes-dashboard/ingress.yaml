@@ -5,6 +5,8 @@ metadata:
   namespace: kubernetes-dashboard
   annotations:
     cert-manager.io/cluster-issuer: ca-issuer
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
@@ -18,7 +20,7 @@ spec:
           service:
             name: kubernetes-dashboard-kong-proxy
             port:
-              number: 8443
+              number: 443
   tls:
   - hosts:
     - kubernetes-dashboard.local
