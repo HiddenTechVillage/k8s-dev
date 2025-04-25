@@ -21,6 +21,9 @@ data:
         - Github:
             - abbr: GH
               href: https://github.com/
+        - Blog:
+            - abbr: BG
+              href: https://chrismatcham.dev/
   services.yaml: |
     - CI / CD:
         - ArgoCD:
@@ -32,10 +35,10 @@ data:
             href: https://testapp.local:30443/
             description: Super Basic App
 
-    - My Third Group:
+    - Monitoring:
         - My Third Service:
-            href: http://localhost/
-            description: Homepage is 😎
+            href: https://kubernetes-dashboard.local:30443/
+            description: K8s Dashboard
   widgets.yaml: |
     - kubernetes:
         cluster:
