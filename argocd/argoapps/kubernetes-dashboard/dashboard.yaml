@@ -20,7 +20,7 @@ spec:
             ## Configuration reference: https://docs.konghq.com/gateway/3.6.x/reference/configuration
             env:
               dns_order: AAAA,A,CNAME,LAST,SRV
-              dns_resolver: 10.43.68.246:53
+              dns_resolver: 10.43.0.10:53
 
 
   syncPolicy:
