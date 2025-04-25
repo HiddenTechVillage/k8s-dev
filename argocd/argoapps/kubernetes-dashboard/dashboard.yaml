@@ -12,6 +12,16 @@ spec:
     repoURL: https://kubernetes.github.io/dashboard/
     chart: kubernetes-dashboard
     targetRevision: 7.12.0
+    helm:
+      values: |
+        app:
+          kong:
+            enabled: true
+            ## Configuration reference: https://docs.konghq.com/gateway/3.6.x/reference/configuration
+            env:
+              dns_order: AAAA,A,CNAME,LAST,SRV
+
+
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
