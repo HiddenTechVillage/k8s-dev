@@ -31,7 +31,7 @@ data:
             description: GitOps CD
             widget:
               type: argocd
-              url: http://argocd-server.argocd.svc.cluster.local:443/
+              url: http://argocd-server.argocd.svc.cluster.local:80/
               key: $ARGOCD_API_KEY
 
     - Apps:
