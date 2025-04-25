@@ -32,7 +32,7 @@ data:
             widget:
               type: argocd
               url: https://argocd-server.argocd.svc.cluster.local:443/
-              key: "{{ .key | toString }}" # <-- convert []byte to string
+              key: "{{ .argocd-homepage-api-key | toString }}" # <-- convert []byte to string
 
     - Apps:
         - Test Application:
