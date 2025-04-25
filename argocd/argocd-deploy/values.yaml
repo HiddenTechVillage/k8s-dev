@@ -10,91 +10,10 @@ configs:
   # General Argo CD configuration. Any values you put under `.configs.cm` are passed to argocd-cm ConfigMap.
   ## Ref: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/argocd-cm.yaml
   cm:
-    # -- Create the argocd-cm configmap for [declarative setup]
     create: true
-
     accounts.homepage: apiKey, login
-    # disables user. User is enabled by default
     accounts.homepage.enabled: "true"
 
-    # -- Annotations to be added to argocd-cm configmap
-    annotations: {}
-
-    # -- The name of tracking label used by Argo CD for resource pruning
-    application.instanceLabelKey: argocd.argoproj.io/instance
-
-    # -- Enable control of the service account used for the sync operation (alpha)
-    ## Ref: https://argo-cd.readthedocs.io/en/stable/operator-manual/app-sync-using-impersonation/
-    application.sync.impersonation.enabled: false
-
-    # -- Enable logs RBAC enforcement
-    ## Ref: https://argo-cd.readthedocs.io/en/latest/operator-manual/upgrading/2.3-2.4/#enable-logs-rbac-enforcement
-    server.rbac.log.enforce.enable: false
-
-    # -- Enable exec feature in Argo UI
-    ## Ref: https://argo-cd.readthedocs.io/en/latest/operator-manual/rbac/#exec-resource
-    exec.enabled: false
-
-    # -- Enable local admin user
-    ## Ref: https://argo-cd.readthedocs.io/en/latest/faq/#how-to-disable-admin-user
-    admin.enabled: true
-
-    # -- Timeout to discover if a new manifests version got published to the repository
-    timeout.reconciliation: 180s
-
-    # -- Timeout to refresh application data as well as target manifests cache
-    timeout.hard.reconciliation: 0s
-
-    # -- Enable Status Badge
-    ## Ref: https://argo-cd.readthedocs.io/en/stable/user-guide/status-badge/
-    statusbadge.enabled: false
-
-    # Dex configuration
-    # dex.config: |
-    #   connectors:
-    #     # GitHub example
-    #     - type: github
-    #       id: github
-    #       name: GitHub
-    #       config:
-    #         clientID: aabbccddeeff00112233
-    #         clientSecret: $dex.github.clientSecret # Alternatively $<some_K8S_secret>:dex.github.clientSecret
-    #         orgs:
-    #         - name: your-github-org
-
-    # OIDC configuration as an alternative to dex (optional).
-    # oidc.config: |
-    #   name: AzureAD
-    #   issuer: https://login.microsoftonline.com/TENANT_ID/v2.0
-    #   clientID: CLIENT_ID
-    #   clientSecret: $oidc.azuread.clientSecret
-    #   rootCA: |
-    #     -----BEGIN CERTIFICATE-----
-    #     ... encoded certificate data here ...
-    #     -----END CERTIFICATE-----
-    #   requestedIDTokenClaims:
-    #     groups:
-    #       essential: true
-    #   requestedScopes:
-    #     - openid
-    #     - profile
-    #     - email
-
-    # Extension Configuration
-    ## Ref: https://argo-cd.readthedocs.io/en/latest/developer-guide/extensions/proxy-extensions/
-    # extension.config: |
-    #   extensions:
-    #   - name: httpbin
-    #     backend:
-    #       connectionTimeout: 2s
-    #       keepAlive: 15s
-    #       idleConnectionTimeout: 60s
-    #       maxIdleConnections: 30
-    #       services:
-    #       - url: http://httpbin.org
-    #         headers:
-    #         - name: some-header
-    #           value: '$some.argocd.secret.key'
-    #         cluster:
-    #           name: some-cluster
-    #           server: https://some-cluster
+  rbac:
+    policy.csv: |
+      g, homepage, role:readonly
