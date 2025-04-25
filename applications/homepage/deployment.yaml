@@ -38,7 +38,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: argocd-homepage-api-key
-                  key: argocd-homepage-api-key
+                  key: key
           ports:
             - name: http
               containerPort: 3000
