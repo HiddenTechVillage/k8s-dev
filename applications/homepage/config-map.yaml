@@ -67,6 +67,7 @@ data:
         longitude: 30.525026
         units: metric # or imperial
         provider: openweathermap
+        apiKey: $WEATHER_API_KEY
         cache: 5 # Time in minutes to cache API responses, to stay within limits
         format: # optional, Intl.NumberFormat options
           maximumFractionDigits: 1
