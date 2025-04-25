@@ -67,9 +67,9 @@ data:
         provider: duckduckgo
         target: _blank
     - openweathermap:
-        label: Kyiv #optional
-        latitude: 50.449684
-        longitude: 30.525026
+        label: Calgary #optional
+        latitude: 51.049999
+        longitude: -114.066666
         units: metric # or imperial
         provider: openweathermap
         apiKey: "{{ .key | toString }}"
