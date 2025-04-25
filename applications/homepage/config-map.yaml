@@ -32,7 +32,7 @@ data:
             widget:
               type: argocd
               url: https://argocd-server.argocd.svc.cluster.local:443/
-              key: $ARGOCD_API_KEY
+              key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJob21lcGFnZTphcGlLZXkiLCJuYmYiOjE3NDU1OTQ3MzAsImlhdCI6MTc0NTU5NDczMCwianRpIjoiOTQ4Y2M3ODktOTQyZS00YTE3LWI1YzQtN2IwYTExODIwNTI3In0.7JeMPpks_mNYUJrxi_X4y64-biFoqMDnHe3Ley6aveY
 
     - Apps:
         - Test Application:
