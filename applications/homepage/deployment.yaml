@@ -61,7 +61,7 @@ spec:
               name: homepage-config
               subPath: settings.yaml
             - mountPath: /app/config/widgets.yaml
-              name: homepage-config
+              name: homepage-widgets
               subPath: widgets.yaml
             - mountPath: /app/config/logs
               name: logs
@@ -72,5 +72,8 @@ spec:
         - name: homepage-services
           secret:
             secretName: homepage-services
+        - name: homepage-widgets
+          secret:
+            secretName: homepage-widgets
         - name: logs
           emptyDir: {}
