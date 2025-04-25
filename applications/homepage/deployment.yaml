@@ -32,7 +32,7 @@ spec:
             - name: WEATHER_API_KEY
               valueFrom:
                 secretKeyRef:
-                  name: bitwarden
+                  name: weather-api-key
                   key: weather-api-key
           ports:
             - name: http
