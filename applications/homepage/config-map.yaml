@@ -39,6 +39,11 @@ data:
         - Kubernetes Dashboard:
             href: https://kubernetes-dashboard.local:30443/
             description: Super Simple K8s Dashboard
+    - widget:
+        type: argocd
+        url: http://argocd.host.or.ip:port
+        key: argocdapikey
+
   widgets.yaml: |
     - kubernetes:
         cluster:
