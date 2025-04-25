@@ -61,4 +61,13 @@ data:
     - search:
         provider: duckduckgo
         target: _blank
+    - openweathermap:
+        label: Kyiv #optional
+        latitude: 50.449684
+        longitude: 30.525026
+        units: metric # or imperial
+        provider: openweathermap
+        cache: 5 # Time in minutes to cache API responses, to stay within limits
+        format: # optional, Intl.NumberFormat options
+          maximumFractionDigits: 1
   docker.yaml: ""
