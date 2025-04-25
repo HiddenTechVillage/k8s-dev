@@ -74,5 +74,8 @@ spec:
         - name: homepage-config
           configMap:
             name: homepage
+        - name: homepage-services
+          secret:
+            secretName: homepage-services
         - name: logs
           emptyDir: {}
