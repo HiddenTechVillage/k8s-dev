@@ -32,7 +32,7 @@ data:
             widget:
               type: argocd
               url: https://argocd.local:30443/
-              key: argocdapikey
+              key: $ARGOCD_API_KEY
 
     - Apps:
         - Test Application:
