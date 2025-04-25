@@ -35,7 +35,7 @@ spec:
               service:
                 name: kubernetes-dashboard-kong-proxy
                 port:
-                  name: https
+                  number: 443
             issuer:
               name: ca-issuer
               # Scope determines what kind of issuer annotation will be used on ingress resource
