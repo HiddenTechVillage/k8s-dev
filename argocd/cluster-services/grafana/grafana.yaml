@@ -20,6 +20,7 @@ spec:
           annotations:
             cert-manager.io/cluster-issuer: ca-issuer
             nginx.ingress.kubernetes.io/rewrite-target: /
+            nginx.ingress.kubernetes.io/ssl-redirect: "false"
           path: /
           pathType: Prefix
           hosts:
