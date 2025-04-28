@@ -26,7 +26,7 @@ spec:
             - grafana.local
           tls:
           - hosts:
-            - grafana.local.local
+            - grafana.local
             secretName: grafana-tls-certs
   syncPolicy:
     syncOptions:
