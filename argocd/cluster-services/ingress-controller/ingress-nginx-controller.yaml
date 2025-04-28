@@ -19,10 +19,11 @@ spec:
           scope:
             enabled: false
           service:
-            type: NodePort
-            nodePorts:
-              http: 30080
-              https: 30443
+            type: LoadBalancer
+            ports:
+              http: 80
+              https: 443
+
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
