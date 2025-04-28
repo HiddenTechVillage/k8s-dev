@@ -25,6 +25,14 @@ spec:
           pathType: Prefix
           hosts:
             - grafana.local
+          extraPaths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: grafana
+                  port:
+                    number: 3000
           tls:
           - hosts:
             - grafana.local
