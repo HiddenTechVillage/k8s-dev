@@ -12,6 +12,23 @@ spec:
     repoURL: https://grafana.github.io/helm-charts
     chart: grafana
     targetRevision: 8.13.1
+    helm:
+      values: |
+        ingress:
+          enabled: true
+          annotations:
+            cert-manager.io/cluster-issuer: ca-issuer
+            nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+            nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+            nginx.ingress.kubernetes.io/rewrite-target: /
+          path: /
+          pathType: Prefix
+          hosts:
+            - grafana.local
+          tls:
+          - hosts:
+            - grafana.local.local
+            secretName: grafana-tls-certs
   syncPolicy:
     syncOptions:
       - CreateNamespace=true

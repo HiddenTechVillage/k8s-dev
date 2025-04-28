@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: grafana-tls-certs
+  namespace: external-secrets
+spec:
+  secretName: grafana-tls-certs
+  commonName: grafana.monitoring.svc.cluster.local
+  dnsNames:
+    - grafana.monitoring.svc.cluster.local
+    - grafana.local
+  issuerRef:
+    name: ca-issuer
+    kind: ClusterIssuer
