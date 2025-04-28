@@ -16,14 +16,11 @@ spec:
       releaseName: ingress-nginx
       values: |
         controller:
+          hostNetwork: true
           scope:
             enabled: false
           service:
-            type: LoadBalancer
-            ports:
-              http: 80
-              https: 443
-
+            type: ClusterIP
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
