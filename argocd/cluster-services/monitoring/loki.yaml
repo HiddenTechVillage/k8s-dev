@@ -52,6 +52,7 @@ spec:
           service:
             type: LoadBalancer
           replicas: 2
+          affinity: []
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
