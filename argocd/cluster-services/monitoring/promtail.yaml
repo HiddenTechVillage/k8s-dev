@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: alloy
+  name: promtail
   namespace: argocd
 spec:
   project: default
@@ -10,7 +10,7 @@ spec:
     namespace: monitoring
   source:
     repoURL: https://grafana.github.io/helm-charts
-    chart: alloy
+    chart: promtail
     targetRevision: 6.16.6
     helm:
       values: |
