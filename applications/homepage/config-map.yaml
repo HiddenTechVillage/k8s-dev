@@ -49,7 +49,7 @@ data:
             href: https://uptime-kuma.local:30443/
             widget:
               type: uptimekuma
-              url: https://uptime-kuma.monitoring.svc.cluster.local:3001
+              url: http://uptime-kuma.monitoring.svc.cluster.local:3001
               slug: k8s-dev
               key: uk1_mRKCPHQioOQh3twzqk3IpI1EqAjxNpNJYkPYV2c2
 
