@@ -37,7 +37,7 @@ data:
             href: https://testapp.local:30443/
     - Monitoring:
         - Grafana:
-            href: hhttps://grafana.local:30443/
+            href: https://grafana.local:30443/
             widget:
               type: grafana
               url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80/
