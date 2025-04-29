@@ -5,9 +5,9 @@ metadata:
   namespace: monitoring
 spec:
   secretName: grafana-tls-certs
-  commonName: grafana.monitoring.svc.cluster.local
+  commonName: kube-prometheus-stack-grafana.monitoring.svc.cluster.local
   dnsNames:
-    - grafana.monitoring.svc.cluster.local
+    - kube-prometheus-stack-grafana.monitoring.svc.cluster.local
     - grafana.local
   issuerRef:
     name: ca-issuer
