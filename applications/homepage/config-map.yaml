@@ -28,7 +28,6 @@ data:
     - CI / CD:
         - ArgoCD:
             href: https://argocd.local:30443/
-            description: GitOps CD
             widget:
               type: argocd
               url: https://argocd-server.argocd.svc.cluster.local:443/
@@ -37,12 +36,11 @@ data:
     - Apps:
         - Test Application:
             href: https://testapp.local:30443/
-            description: Super Basic App
+
 
     - Monitoring:
         - Grafana:
             href: hhttps://grafana.local:30443/
-            description: Super Simple K8s Dashboard
             widget:
               type: grafana
               url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80/
@@ -50,10 +48,8 @@ data:
               password: "{{ .grafanahomepage | toString }}"
         - Kubernetes Dashboard:
             href: https://kubernetes-dashboard.local:30443/
-            description: Super Simple K8s Dashboard
         - Uptime Kuma:
             href: https://uptime-kuma.local:30443/
-            description: Super Simple Uptime Monitoring
             widget:
               type: uptimekuma
               url: https://uptime-kuma.monitoring.svc.cluster.local:3001
