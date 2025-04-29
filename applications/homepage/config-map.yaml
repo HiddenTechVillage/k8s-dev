@@ -32,7 +32,7 @@ data:
             widget:
               type: argocd
               url: https://argocd-server.argocd.svc.cluster.local:443/
-              key: "{{ .argocd-homepage | toString }}"
+              key: "{{ .key | toString }}"
 
     - Apps:
         - Test Application:
@@ -40,6 +40,14 @@ data:
             description: Super Basic App
 
     - Monitoring:
+        - Grafana:
+            href: hhttps://grafana.local:30443/
+            description: Super Simple K8s Dashboard
+            widget:
+              type: grafana
+              url: https://kube-prometheus-stack-operator.monitoring.svc.cluster.local:443
+              username: username
+              password: password
         - Kubernetes Dashboard:
             href: https://kubernetes-dashboard.local:30443/
             description: Super Simple K8s Dashboard
