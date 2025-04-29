@@ -20,7 +20,7 @@ spec:
             name: kube-prometheus-stack-grafana
             port:
               number: 80
-tls:
-- hosts:
-  - grafana.local
-  secretName: grafana-tls-certs
+  tls:
+  - hosts:
+    - grafana.local
+    secretName: grafana-tls-certs
