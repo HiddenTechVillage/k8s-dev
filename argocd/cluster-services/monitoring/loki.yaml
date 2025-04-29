@@ -51,7 +51,7 @@ spec:
         gateway:
           service:
             type: LoadBalancer
-          replicas: 1
+          replicas: 2
           affinity: []
   syncPolicy:
     syncOptions:
