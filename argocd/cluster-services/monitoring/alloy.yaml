@@ -12,6 +12,14 @@ spec:
     repoURL: https://grafana.github.io/helm-charts
     chart: alloy
     targetRevision: 1.0.2
+    helm:
+      values: |
+        configMap:
+          content: |-
+            logging {
+              level = "info"
+              format = "logfmt"
+            }
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
