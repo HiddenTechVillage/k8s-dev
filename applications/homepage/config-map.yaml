@@ -43,7 +43,7 @@ data:
         - Kubernetes Dashboard:
             href: https://kubernetes-dashboard.local:30443/
             description: Super Simple K8s Dashboard
-        - Uptime Kuma
+        - Uptime Kuma:
             href: https://uptime-kuma.local:30443/
             description: Super Simple Uptime Monitoring
             widget:
