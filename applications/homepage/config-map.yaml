@@ -32,12 +32,9 @@ data:
               type: argocd
               url: https://argocd-server.argocd.svc.cluster.local:443/
               key: "{{ .argocdhomepage | toString }}"
-
     - Apps:
         - Test Application:
             href: https://testapp.local:30443/
-
-
     - Monitoring:
         - Grafana:
             href: hhttps://grafana.local:30443/
@@ -54,6 +51,7 @@ data:
               type: uptimekuma
               url: https://uptime-kuma.monitoring.svc.cluster.local:3001
               slug: k8s-dev
+              key: uk1_mRKCPHQioOQh3twzqk3IpI1EqAjxNpNJYkPYV2c2
 
   widgets.yaml: |
     - kubernetes:
