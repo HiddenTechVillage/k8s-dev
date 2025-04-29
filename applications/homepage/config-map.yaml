@@ -48,7 +48,7 @@ data:
             description: Super Simple Uptime Monitoring
             widget:
               type: uptimekuma
-              url: https://uptime-kuma.monitoring.svc.cluster.local:443/
+              url: https://uptime-kuma.monitoring.svc.cluster.local:3001/
               slug: statuspageslug
 
   widgets.yaml: |
