@@ -46,8 +46,8 @@ data:
             widget:
               type: grafana
               url: https://kube-prometheus-stack-operator.monitoring.svc.cluster.local:443
-              username: username
-              password: password
+              username: grafana-homepage
+              password: "{{ .grafanahomepage | toString }}"
         - Kubernetes Dashboard:
             href: https://kubernetes-dashboard.local:30443/
             description: Super Simple K8s Dashboard
