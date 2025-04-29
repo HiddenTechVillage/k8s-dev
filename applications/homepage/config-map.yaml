@@ -51,8 +51,6 @@ data:
               type: uptimekuma
               url: http://uptime-kuma.monitoring.svc.cluster.local:3001
               slug: k8s-dev
-              key: uk1_mRKCPHQioOQh3twzqk3IpI1EqAjxNpNJYkPYV2c2
-
   widgets.yaml: |
     - kubernetes:
         cluster:
