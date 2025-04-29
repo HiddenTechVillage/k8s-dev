@@ -55,8 +55,8 @@ spec:
         compactor:
           replicas: 1
         indexGateway:
-          replicas: 1
-          maxUnavailable: 1
+          replicas: 2
+          maxUnavailable: 2
 
         bloomPlanner:
           replicas: 0
