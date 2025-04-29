@@ -1,45 +1,45 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: grafana
-  namespace: argocd
-spec:
-  project: default
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: monitoring
-  source:
-    repoURL: https://grafana.github.io/helm-charts
-    chart: grafana
-    targetRevision: 8.13.1
-    helm:
-      values: |
-        ingress:
-          enabled: true
-          ingressClassName: nginx
-          annotations:
-            cert-manager.io/cluster-issuer: ca-issuer
-            nginx.ingress.kubernetes.io/rewrite-target: /
-            nginx.ingress.kubernetes.io/ssl-redirect: "false"
-          path: /
-          pathType: Prefix
-          hosts:
-            - grafana.local
-          extraPaths:
-            - path: /
-              pathType: Prefix
-              backend:
-                service:
-                  name: grafana
-                  port:
-                    number: 3000
-          tls:
-          - hosts:
-            - grafana.local
-            secretName: grafana-tls-certs
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-    automated:
-      selfHeal: true
-      prune: true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: grafana
+#   namespace: argocd
+# spec:
+#   project: default
+#   destination:
+#     server: "https://kubernetes.default.svc"
+#     namespace: monitoring
+#   source:
+#     repoURL: https://grafana.github.io/helm-charts
+#     chart: grafana
+#     targetRevision: 8.13.1
+#     helm:
+#       values: |
+#         ingress:
+#           enabled: true
+#           ingressClassName: nginx
+#           annotations:
+#             cert-manager.io/cluster-issuer: ca-issuer
+#             nginx.ingress.kubernetes.io/rewrite-target: /
+#             nginx.ingress.kubernetes.io/ssl-redirect: "false"
+#           path: /
+#           pathType: Prefix
+#           hosts:
+#             - grafana.local
+#           extraPaths:
+#             - path: /
+#               pathType: Prefix
+#               backend:
+#                 service:
+#                   name: grafana
+#                   port:
+#                     number: 3000
+#           tls:
+#           - hosts:
+#             - grafana.local
+#             secretName: grafana-tls-certs
+#   syncPolicy:
+#     syncOptions:
+#       - CreateNamespace=true
+#     automated:
+#       selfHeal: true
+#       prune: true
