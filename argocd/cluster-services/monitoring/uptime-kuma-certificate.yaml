@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   secretName: uptime-kuma-tls-certs
-  commonName: uptime-kuma.local
+  commonName: uptime-kuma.monitoring.svc.cluster.local
   dnsNames:
     - uptime-kuma.local
   issuerRef:
