@@ -38,11 +38,11 @@ spec:
         deploymentMode: SimpleScalable
 
         backend:
-          replicas: 1
+          replicas: 2
         read:
-          replicas: 1
+          replicas: 2
         write:
-          replicas: 1 # To ensure data durability with replication
+          replicas: 2 # To ensure data durability with replication
 
         # Enable minio for storage
         minio:
