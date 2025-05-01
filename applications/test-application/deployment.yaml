@@ -25,5 +25,9 @@ spec:
             secretKeyRef:
               name: bitwarden
               key: test
+      - name: counter
+        image: busybox:1.28
+        args: [/bin/sh, -c,
+                'i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done']
 
 
