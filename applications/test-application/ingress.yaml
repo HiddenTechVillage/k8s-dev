@@ -16,7 +16,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: base-application
+            name: test-application
             port:
               number: 443
   tls:
