@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: test-application
-        image: matcham89/app:latest
+        image: matcham89/simple-app:1.0.0
         ports:
         - containerPort: 5000
         env:
