@@ -11,13 +11,13 @@ spec:
   - host: kagent.local
     http:
       paths:
-      - path: /
+      - path: /ui
         pathType: Prefix
         backend:
           service:
             name: kagent
             port:
-              number: 8081
+              number: 443
               
   tls:
   - hosts:
