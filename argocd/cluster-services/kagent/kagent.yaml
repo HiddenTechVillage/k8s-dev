@@ -11,6 +11,7 @@ spec:
   source:
     repoURL: ghcr.io/kagent-dev/kagent/helm
     chart: kagent
+    targetRevision: 0.3.0
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
