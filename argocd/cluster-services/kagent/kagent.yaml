@@ -14,8 +14,13 @@ spec:
       targetRevision: 0.3.0
       helm:
         values: |
-          env:
-            - name: OPENAI_API_KEY
+          providers:
+            default: openAI
+            openAI:
+              provider: OpenAI
+              model: "gpt-4.1-mini"
+              apiKeySecretRef: kagent-openai
+              apiKeySecretKey: OPENAI_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: kagent-openai
