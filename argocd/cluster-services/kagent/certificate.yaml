@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kagent-tls-certs
+  namespace: kagent
+spec:
+  secretName: kagent-tls-certs
+  commonName: kagent.kagent.svc.cluster.local
+  dnsNames:
+    - kagent.kagent.svc.cluster.local
+    - kagent.local
+  issuerRef:
+    name: ca-issuer
+    kind: ClusterIssuer

@@ -21,6 +21,15 @@ spec:
               model: "gpt-4.1-mini"
               apiKeySecretRef: kagent-openai
               apiKeySecretKey: OPENAI_API_KEY
+          service:
+            type: ClusterIP
+            ports:
+              ui:
+                port: 443
+                targetPort: 443
+              app:
+                port: 8081
+                targetPort: 8081
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
       targetRevision: 0.3.0
