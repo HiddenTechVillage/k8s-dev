@@ -24,4 +24,4 @@ spec:
   tls:
   - hosts:
     - kagent.local
-    secretName: kagent-server-tls # as expected by kagent-server
+    secretName: kagent-tls-certs
