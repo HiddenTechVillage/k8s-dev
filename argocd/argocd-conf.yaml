@@ -9,8 +9,8 @@ spec:
       - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
         targetRevision: HEAD
         path: argocd/argo-applications
-        # directory:
-        #   recurse: true
+        directory:
+          recurse: true
       # - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
       #   targetRevision: HEAD
       #   path: argocd/cluster-services
