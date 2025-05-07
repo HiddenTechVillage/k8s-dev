@@ -8,19 +8,9 @@ spec:
   sources:
       - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
         targetRevision: HEAD
-        path: argocd/argo-applications
+        path: argocd/applications
         directory:
           recurse: true
-      # - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
-      #   targetRevision: HEAD
-      #   path: argocd/cluster-services
-      #   directory:
-      #     recurse: true
-      # - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
-      #   targetRevision: HEAD
-      #   path: argocd/sealed-secrets
-      #   directory:
-      #     recurse: true
   destination:
       server: https://kubernetes.default.svc
       namespace: default
