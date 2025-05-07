@@ -9,8 +9,8 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: kagent
   sources:
-    - repoURL: ghcr.io/kagent-dev/kagent/helm
-      chart: kagent
+    - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
+      path: development/kagent
       targetRevision: 0.3.1
       helm:
         values: |
