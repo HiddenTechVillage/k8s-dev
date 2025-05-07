@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: external-secrets
+  name: ingress-nginx-controller
   namespace: argocd
 spec:
   project: default
   source:
       repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
       targetRevision: HEAD
-      path: cluster-services/external-secrets
+      path: cluster-services/ingress-controller
   destination:
       server: https://kubernetes.default.svc
-      namespace: external-secrets
+      namespace: ingress-nginx
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
