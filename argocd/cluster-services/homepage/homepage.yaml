@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-dev
+  name: homepage
   namespace: argocd
 spec:
   project: default
   sources:
       - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
         targetRevision: HEAD
-        path: argocd/cluster-services
+        path: argocd/applications/homepage
         directory:
           recurse: true
   destination:
