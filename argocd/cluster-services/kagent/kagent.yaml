@@ -31,5 +31,6 @@ spec:
   ignoreDifferences:
   - kind: Secret
     name: kagent-openai
+    namespace: kagent
     jsonPointers:
       - /data  
