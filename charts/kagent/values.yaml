@@ -23,7 +23,7 @@ providers:
     model: "claude-3-sonnet-20240229"
     apiKeySecretRef: kagent-anthropic
     apiKeySecretKey: ANTHROPIC_API_KEY
-    apiKey: ""
+    apiKey: "this_is_a_key"
   azureOpenAI:
     provider: AzureOpenAI
     model: "gpt-4.1-mini"
