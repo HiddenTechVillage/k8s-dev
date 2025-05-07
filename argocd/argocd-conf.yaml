@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-dev
+  namespace: argocd
+spec:
+  project: default
+  sources:
+      - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
+        targetRevision: HEAD
+        path: argocd/argo-applications
+        # directory:
+        #   recurse: true
+      # - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
+      #   targetRevision: HEAD
+      #   path: argocd/cluster-services
+      #   directory:
+      #     recurse: true
+      # - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
+      #   targetRevision: HEAD
+      #   path: argocd/sealed-secrets
+      #   directory:
+      #     recurse: true
+  destination:
+      server: https://kubernetes.default.svc
+      namespace: default
+  syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+      automated:
+        selfHeal: true
+        prune: true
