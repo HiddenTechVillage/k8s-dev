@@ -12,7 +12,7 @@ providers:
     model: "gpt-4.1-mini"
     apiKeySecretRef: kagent-openai-key
     apiKeySecretKey: OPENAI_API_KEY
-    apiKey: "this_is_a_key"
+    apiKey: ""
   ollama:
     provider: Ollama
     model: "llama3.2"
