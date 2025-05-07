@@ -17,6 +17,5 @@ data:
   ANTHROPIC_API_KEY: "-"
 kind: Secret
 metadata:
-  creationTimestamp: null
   name: kagent-anthropic
   namespace: kagent
