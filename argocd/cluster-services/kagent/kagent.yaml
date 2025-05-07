@@ -28,9 +28,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
-  ignoreDifferences:
-  - kind: Secret
-    name: kagent-openai
-    namespace: kagent
-    jsonPointers:
-      - /data  
