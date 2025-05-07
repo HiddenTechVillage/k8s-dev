@@ -8,7 +8,7 @@ spec:
   sources:
       - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
         targetRevision: HEAD
-        path: argocd/applications/applications/test-application
+        path: argocd/applications/test-application
         directory:
           recurse: true
   destination:
