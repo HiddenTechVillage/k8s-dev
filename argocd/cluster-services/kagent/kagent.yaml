@@ -12,19 +12,6 @@ spec:
     - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
       path: charts/kagent
       targetRevision: HEAD
-      helm:
-        values: |
-          providers:
-            openAI:
-              provider: OpenAI
-              model: "gpt-4.1-mini"
-              apiKeySecretRef: kagent-openai
-              apiKeySecretKey: OPENAI_API_KEY
-            azureOpenAI:
-              provider: AzureOpenAI
-              model: "gpt-4.1-mini"
-              apiKeySecretRef: kagent-azure-openai
-              apiKeySecretKey: AZUREOPENAI_API_KEY
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
       targetRevision: 0.3.1
