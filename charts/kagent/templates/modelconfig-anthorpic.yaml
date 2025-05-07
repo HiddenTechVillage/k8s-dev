@@ -9,3 +9,14 @@ spec:
   model: claude-3-sonnet-20240229
   provider: Anthropic
   anthropic: {}
+
+---
+
+apiVersion: v1
+data:
+  ANTHROPIC_API_KEY: "-"
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: kagent-anthropic
+  namespace: kagent
