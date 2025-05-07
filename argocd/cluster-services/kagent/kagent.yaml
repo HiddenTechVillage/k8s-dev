@@ -29,8 +29,7 @@ spec:
       selfHeal: true
       prune: true
   ignoreDifferences:
-  - group: "app"
-    kind: Secret
+  - kind: Secret
     name: kagent-openai
     jsonPointers:
       - /data  
