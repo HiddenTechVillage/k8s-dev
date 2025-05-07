@@ -14,7 +14,7 @@ spec:
 
 apiVersion: v1
 data:
-  ANTHROPIC_API_KEY: "-"
+  ANTHROPIC_API_KEY: dGhpc19pc19hX2tleQo=
 kind: Secret
 metadata:
   name: kagent-anthropic
