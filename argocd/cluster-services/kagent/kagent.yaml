@@ -10,8 +10,8 @@ spec:
     namespace: kagent
   sources:
     - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
-      path: development/kagent
-      targetRevision: 0.3.1
+      path: charts/kagent
+      targetRevision: HEAD
       helm:
         values: |
           providers:
