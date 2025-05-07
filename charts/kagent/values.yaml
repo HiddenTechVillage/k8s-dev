@@ -6,7 +6,7 @@ global:
 
 # https://kagent.dev/docs/getting-started/configuring-providers
 providers:
-  default: anthropic
+  default: openAI
   openAI:
     provider: OpenAI
     model: "gpt-4.1-mini"
@@ -125,11 +125,11 @@ contrib:
     k8s:
       enabled: true
     istio:
-      enabled: true
+      enabled: false
     helm:
       enabled: true
     promql:
-      enabled: true
+      enabled: false
     observability:
       enabled: true
       prometheus:
