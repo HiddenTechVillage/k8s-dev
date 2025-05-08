@@ -29,8 +29,7 @@ spec:
         - sh
         - -c
         - |
-          npx argocd-mcp@latest 
-          stdio
+          npx argocd-mcp@latest sse
         ports:
         - containerPort: 3000
         env:
