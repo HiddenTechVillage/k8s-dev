@@ -29,8 +29,7 @@ spec:
         - sh
         - -c
         - |
-          npm install -g argocd-mcp@latest
-          argocd-mcp sse
+          npx argocd-mcp@latest stdio
         ports:
         - containerPort: 3000
         env:
