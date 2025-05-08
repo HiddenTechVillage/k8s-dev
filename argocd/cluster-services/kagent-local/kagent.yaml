@@ -10,7 +10,7 @@ spec:
     namespace: kagent-local
   sources:
     - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
-      path: charts/kagent-local
+      path: charts/kagent
       targetRevision: HEAD
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
