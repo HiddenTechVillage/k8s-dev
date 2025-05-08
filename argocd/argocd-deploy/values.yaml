@@ -1,10 +1,6 @@
 
 ## Server
 Server:
-  # -- Additional command line arguments to pass to repo server
-  extraArgs:
-  - --insecure
-
 ## Argo Configs
 configs:
   # General Argo CD configuration. Any values you put under `.configs.cm` are passed to argocd-cm ConfigMap.
@@ -14,6 +10,9 @@ configs:
     accounts.homepage: apiKey, login
     accounts.homepage.enabled: "true"
 
+    accounts.argocd-mcp: apiKey, login
+    accounts.argocd-mcp.enabled: "true"
   rbac:
     policy.csv: |
       g, homepage, role:readonly
+      g, argocd-mcp, role:admin
