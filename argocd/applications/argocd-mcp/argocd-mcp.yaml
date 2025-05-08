@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: argocd-mcp
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-mcp-secret
+  namespace: argocd-mcp
+type: Opaque
+data:
+  ARGOCD_API_TOKEN: ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBjM01pT2lKaGNtZHZZMlFpTENKemRXSWlPaUpoY21kdlkyUXRiV053T21Gd2FVdGxlU0lzSW01aVppSTZNVGMwTmpZMk5EZzNPQ3dpYVdGMElqb3hOelEyTmpZME9EYzRMQ0pxZEdraU9pSTRZVGRoTVRBMk5TMHlZalE0TFRSbE9HSXRPVFZOTT1ac01UTTROQVJtWlRJNVpqa2lmUS4xankwZkI5SDVPcmtPN3VjOW52T2dsNlE0SktxZGdlOCBlZkM3My1pWk1z
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-mcp
+  namespace: argocd-mcp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: argocd-mcp
+  template:
+    metadata:
+      labels:
+        app: argocd-mcp
+    spec:
+      containers:
+      - name: argocd-mcp
+        image: node:20-slim
+        command:
+        - sh
+        - -c
+        - |
+          npm install -g argocd-mcp@latest
+          argocd-mcp sse
+        ports:
+        - containerPort: 3000
+        env:
+        - name: ARGOCD_BASE_URL
+          value: "https://argocd.local:30443"
+        - name: ARGOCD_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: argocd-mcp-secret
+              key: ARGOCD_API_TOKEN
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: argocd-mcp
+  namespace: argocd-mcp
+spec:
+  selector:
+    app: argocd-mcp
+  ports:
+  - port: 3000
+    targetPort: 3000
+  type: ClusterIP
