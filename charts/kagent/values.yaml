@@ -2,7 +2,7 @@
 replicaCount: 1
 
 global:
-  tag: ""
+  tag: "0.3.1"
 
 # https://kagent.dev/docs/getting-started/configuring-providers
 providers:
