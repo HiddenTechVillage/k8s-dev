@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kagent 
+  name: kagent-local
   namespace: argocd
 spec:
   project: default
