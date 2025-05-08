@@ -35,7 +35,7 @@ spec:
         - containerPort: 3000
         env:
         - name: ARGOCD_BASE_URL
-          value: "https://argocd.local:30443"
+          value: "https://argocd-mcp.argocd-mcp.svc.cluster.local:443"
         - name: ARGOCD_API_TOKEN
           valueFrom:
             secretKeyRef:
