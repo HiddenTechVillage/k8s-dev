@@ -5,9 +5,7 @@ metadata:
   namespace: kagent
 spec:
   secretName: kagent-tls-certs
-  commonName: kagent.kagent.svc.cluster.local
   dnsNames:
-    - kagent.kagent.svc.cluster.local
     - kagent.local
   issuerRef:
     name: ca-issuer
