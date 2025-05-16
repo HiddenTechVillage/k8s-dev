@@ -10,7 +10,7 @@ spec:
     namespace: kagent
   sources:
     - repoURL: https://github.com/Matcham89/kagent.git
-      path: helm/kagent/Chart-template.yaml
+      path: helm/kagent
       targetRevision: HEAD
       helm:
         values: |
