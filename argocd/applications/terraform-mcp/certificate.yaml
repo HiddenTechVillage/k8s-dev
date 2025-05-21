@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: terraform-mcp-server-tls
+  namespace: default
+spec:
+  secretName: terraform-mcp-server-tls
+  dnsNames:
+    - terraform-mcp-server.local
+  issuerRef:
+    name: ca-issuer
+    kind: ClusterIssuer

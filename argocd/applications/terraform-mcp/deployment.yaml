@@ -1,0 +1,24 @@
+# mcp-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terraform-mcp-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: terraform-mcp-server
+  template:
+    metadata:
+      labels:
+        app: terraform-mcp-server
+    spec:
+      containers:
+      - name: terraform-mcp-server
+        image: localhost:5000/terraform-mcp-server
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MCP_SERVER_ADDR
+          value: "0.0.0.0:8080"
