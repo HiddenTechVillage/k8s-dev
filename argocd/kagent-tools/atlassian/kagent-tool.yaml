@@ -2,16 +2,17 @@ apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
   name: mcp-atlassian
-  namespace: kagent
+  namespace: kagent        
 spec:
-  description: Jira Test
+  description: ArgoCD MCP Server
   config:
     stdio:
-      args: ["stdio"]
-      command: "npx @phuc-nt/mcp-atlassian-server@2.1.1"
+      args:
+      - phuc-nt/mcp-atlassian-server@2.1.1
+      - stdio
+      command: npx
       env:
         test: test
-      # env:
       # - name: CONFLUENCE_URL
       #   value: "https://chrismatcham.atlassian.net/wiki"
       # - name: JIRA_URL
