@@ -12,19 +12,21 @@ spec:
     args:
       - --jira-url
       - https://chrismatcham.atlassian.net
+      - --jira-token
+      - $(JIRA_TOKEN)
       - --confluence-url
       - https://chrismatcham.atlassian.net/wiki
-    argsFrom:
-      - name: CONFLUENCE_API_TOKEN
+      - --confluence-token
+      - $(CONFLUENCE_TOKEN)
+    env:
+      - name: JIRA_TOKEN
         valueFrom:
           secretKeyRef:
             name: mcp-atlassian
-            prefix: --confluence-token=
-            key: confluence-api-token
-      - name: JIRA_API_TOKEN
-        valueFrom:
-          secretKeyRef:
-            name: mcp-atlassian
-            prefix: --jira-token=
             key: jira-api-token
+      - name: CONFLUENCE_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: mcp-atlassian
+            key: confluence-api-token
     disabled: false
