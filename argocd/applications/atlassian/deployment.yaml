@@ -18,8 +18,10 @@ spec:
       - name: mcp-atlassian
         image: ghcr.io/sooperset/mcp-atlassian:latest
         imagePullPolicy: Always
+        args: ["mcp-atlassian -h"]
         ports:
         - containerPort: 8080
+          name: http 
         env:
         - name: CONFLUENCE_URL
           value: "https://chrismatcham.atlassian.net/wiki"
