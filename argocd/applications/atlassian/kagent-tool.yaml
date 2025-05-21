@@ -1,5 +1,5 @@
 apiVersion: agents.kagent.dev/v1alpha1
-kind: Tool
+kind: ToolServer
 metadata:
   name: mcp-atlassian
   namespace: kagent  # Adjust to your namespace if different
