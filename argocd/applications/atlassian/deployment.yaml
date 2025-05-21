@@ -18,7 +18,7 @@ spec:
       - name: mcp-atlassian
         image: ghcr.io/sooperset/mcp-atlassian:latest
         imagePullPolicy: Always
-        args: ["mcp-atlassian -h"]
+        args: ["mcp-atlassian --help"]
         ports:
         - containerPort: 8080
           name: http 
