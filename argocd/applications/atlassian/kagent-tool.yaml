@@ -10,8 +10,7 @@ spec:
       args: ["stdio"]
       command: "npx mcp-atlassian@latest"
       env:
-        - name: test
-          value: "test"
+        test: test
       # env:
       # - name: CONFLUENCE_URL
       #   value: "https://chrismatcham.atlassian.net/wiki"
