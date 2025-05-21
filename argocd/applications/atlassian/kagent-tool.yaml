@@ -7,8 +7,8 @@ spec:
   description: Fetches a website and returns its content
   config:
     stdio:
-      args: ["stdio"]  # Run in stdio mode
-      command: ["npx mcp-atlassian@latest"]
+      args: stdio
+      command: npx mcp-atlassian@latest
       env:
       - name: CONFLUENCE_URL
         value: "https://chrismatcham.atlassian.net/wiki"
