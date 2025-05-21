@@ -12,12 +12,12 @@ spec:
       - stdio
       command: npx
       env:
-        ARGOCD_BASE_URL: "https://argocd-server.argocd.svc.cluster.local"
-        NODE_TLS_REJECT_UNAUTHORIZED: "0"
-      # argsFrom:
-      # - name: ARGOCD_API_TOKEN
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: mcp-argocd
-      #       key: argocd-api-token
-      #       prefix: --ARGOCD_API_TOKEN=
+        - name: ARGOCD_BASE_URL
+          value: "https://argocd-server.argocd.svc.cluster.local"
+        - name: NODE_TLS_REJECT_UNAUTHORIZED
+          value: "0"
+        - name: ARGOCD_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: mcp-argocd
+              key: argocd-api-token
