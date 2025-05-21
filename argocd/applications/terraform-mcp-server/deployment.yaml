@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: terraform-mcp-server
-        image: localhost:5000/terraform-mcp-server
+        image: matcham89/terraform-mcp-server:latest 
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
