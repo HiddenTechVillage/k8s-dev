@@ -12,17 +12,18 @@ spec:
         - stdio
       command: npx
       env:
-        - name: JIRA_URL
-          value: "https://chrismatcham.atlassian.net"
-        - name: CONFLUENCE_URL
-          value: "https://chrismatcham.atlassian.net/wiki"
-        - name: JIRA_API_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: mcp-atlassian
-              key: jira-api-token
-        - name: CONFLUENCE_API_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: mcp-atlassian
-              key: confluence-api-token
+        JIRA_URL: "https://chrismatcham.atlassian.net"
+        CONFLUENCE_URL: "https://chrismatcham.atlassian.net/wiki"
+      # argsFrom:
+      #   - name: JIRA_API_TOKEN
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: mcp-atlassian
+      #         key: jira-api-token
+      #         prefix: --JIRA_API_TOKEN=
+      #   - name: CONFLUENCE_API_TOKEN
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: mcp-atlassian
+      #         key: confluence-api-token
+      #         prefix: --CONFLUENCE_API_TOKEN=
