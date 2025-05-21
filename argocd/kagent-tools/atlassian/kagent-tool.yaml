@@ -14,16 +14,16 @@ spec:
       env:
         JIRA_URL: "https://chrismatcham.atlassian.net"
         CONFLUENCE_URL: "https://chrismatcham.atlassian.net/wiki"
-      argsFrom:
-        - name: JIRA_API_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: mcp-atlassian
-              key: jira-api-token
-              prefix: --JIRA_API_TOKEN=
-        - name: CONFLUENCE_API_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: mcp-atlassian
-              key: confluence-api-token
-              prefix: --CONFLUENCE_API_TOKEN=
+      # argsFrom:
+      #   - name: JIRA_API_TOKEN
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: mcp-atlassian
+      #         key: jira-api-token
+      #         prefix: --JIRA_API_TOKEN=
+      #   - name: CONFLUENCE_API_TOKEN
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: mcp-atlassian
+      #         key: confluence-api-token
+      #         prefix: --CONFLUENCE_API_TOKEN=
