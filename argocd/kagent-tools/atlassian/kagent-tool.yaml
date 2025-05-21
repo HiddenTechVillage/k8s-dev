@@ -6,27 +6,24 @@ metadata:
 spec:
   description: Atlassian MCP Server for Jira and Confluence
   config:
-    sse:
-      url: https://mcp.atlassian.com/v1/sse
-    command: mcp-atlassian
-    args:
-      - --jira-url
-      - https://chrismatcham.atlassian.net
-      - --jira-token
-      - $(JIRA_TOKEN)
-      - --confluence-url
-      - https://chrismatcham.atlassian.net/wiki
-      - --confluence-token
-      - $(CONFLUENCE_TOKEN)
-    env:
-      - name: JIRA_TOKEN
-        valueFrom:
-          secretKeyRef:
-            name: mcp-atlassian
-            key: jira-api-token
-      - name: CONFLUENCE_TOKEN
-        valueFrom:
-          secretKeyRef:
-            name: mcp-atlassian
-            key: confluence-api-token
-    disabled: false
+    stdio:
+      args:
+        - mcp-atlassian@latest
+        - stdio
+      command: npx
+      env:
+        JIRA_URL: "https://chrismatcham.atlassian.net"
+        CONFLUENCE_URL: "https://chrismatcham.atlassian.net/wiki"
+      argsFrom:
+        - name: JIRA_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: mcp-atlassian
+              key: jira-api-token
+              prefix: --JIRA_API_TOKEN=
+        - name: CONFLUENCE_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: mcp-atlassian
+              key: confluence-api-token
+              prefix: --CONFLUENCE_API_TOKEN=
