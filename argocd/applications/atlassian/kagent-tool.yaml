@@ -8,7 +8,7 @@ spec:
   config:
     stdio:
       args: ["stdio"]
-      command: "node phuc-nt/mcp-atlassian-server"
+      command: "npx @phuc-nt/mcp-atlassian-server"
       env:
         test: test
       # env:
