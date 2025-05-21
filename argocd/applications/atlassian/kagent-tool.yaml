@@ -4,7 +4,7 @@ metadata:
   name: mcp-atlassian
   namespace: kagent  # Adjust to your namespace if different
 spec:
-  description: Fetches a website and returns its content
+  description: Jira Test
   config:
     stdio:
       args: ["stdio"]
