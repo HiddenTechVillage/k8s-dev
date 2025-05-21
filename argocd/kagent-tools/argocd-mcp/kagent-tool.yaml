@@ -1,14 +1,16 @@
 apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
-  name: mcp-argocd
+  name: mcp-argocd-gitops
   namespace: kagent
 spec:
-  description: ArgoCD MCP
+  description: ArgoCD MCP Server
   config:
     stdio:
-      args: ["stdio"]
-      command: "npx argocd-mcp@latest"
+      args:
+      - argocd-mcp@latest
+      - stdio
+      command: npx
       env:
         ARGOCD_BASE_URL: "https://argocd-server.argocd.svc.cluster.local"
         # not ideal way to pass this token
