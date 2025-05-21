@@ -10,3 +10,18 @@
         args:
         - awslabs.aws-documentation-mcp-server@latest
         command: uvx
+
+---
+
+apiVersion: kagent.dev/v1alpha1
+kind: ToolServer
+metadata:
+  name: mcp-aws-core-gitops
+  namespace: kagent
+spec:
+  description: AWS Core MCP Server
+  config:
+    stdio:
+      args:
+      - awslabs.core-mcp-server@latest
+      command: uvx
