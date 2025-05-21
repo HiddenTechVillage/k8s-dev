@@ -16,10 +16,9 @@ spec:
     spec:
       containers:
       - name: mcp-atlassian
-        image: node:18-alpine
+        image: ghcr.io/sooperset/mcp-atlassian:latest
         imagePullPolicy: Always
-        command: ["/bin/sh", "-c"]
-        args: ["npm install -g mcp-atlassian && mcp-atlassian stdio"] 
+        args: ["stdio"]  # Run in stdio mode 
         env:
         - name: CONFLUENCE_URL
           value: "https://chrismatcham.atlassian.net/wiki"
