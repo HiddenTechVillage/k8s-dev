@@ -1,13 +1,13 @@
-  apiVersion: kagent.dev/v1alpha1
-  kind: ToolServer
-  metadata:
-    name: mcp-github-gitops
-    namespace: kagent
-  spec:
-    description: GitHub MCP Server
-    config:
-      stdio:
-        args:
-        - -y
-        - "@modelcontextprotocol/server-github"
-        command: npx
+apiVersion: kagent.dev/v1alpha1
+kind: ToolServer
+metadata:
+  name: mcp-github-gitops
+  namespace: kagent
+spec:
+  description: GitHub MCP Server
+  config:
+    stdio:
+      args:
+      - -y
+      - "@modelcontextprotocol/server-github"
+      command: npx

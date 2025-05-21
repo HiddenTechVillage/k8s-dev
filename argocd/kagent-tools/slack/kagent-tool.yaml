@@ -1,13 +1,13 @@
-  apiVersion: kagent.dev/v1alpha1
-  kind: ToolServer
-  metadata:
-    name: mcp-slack-gitops
-    namespace: kagent
-  spec:
-    description: Slack MCP Server
-    config:
-      stdio:
-        args:
-        - -y
-        - "@modelcontextprotocol/server-slack"
-        command: npx
+apiVersion: kagent.dev/v1alpha1
+kind: ToolServer
+metadata:
+  name: mcp-slack-gitops
+  namespace: kagent
+spec:
+  description: Slack MCP Server
+  config:
+    stdio:
+      args:
+      - -y
+      - '@modelcontextprotocol/server-slack'
+      command: npx

@@ -1,15 +1,15 @@
-  apiVersion: kagent.dev/v1alpha1
-  kind: ToolServer
-  metadata:
-    name: mcp-aws-documentation-gitops
-    namespace: kagent
-  spec:
-    description: AWS Docs MCP Server
-    config:
-      stdio:
-        args:
-        - awslabs.aws-documentation-mcp-server@latest
-        command: uvx
+apiVersion: kagent.dev/v1alpha1
+kind: ToolServer
+metadata:
+  name: mcp-aws-documentation-gitops
+  namespace: kagent
+spec:
+  description: AWS Docs MCP Server
+  config:
+    stdio:
+      args:
+      - awslabs.aws-documentation-mcp-server@latest
+      command: uvx
 
 ---
 
