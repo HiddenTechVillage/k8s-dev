@@ -1,15 +1,13 @@
   apiVersion: kagent.dev/v1alpha1
   kind: ToolServer
   metadata:
-    name: terraform-mcp-gitops
+    name: mcp-github-gitops
     namespace: kagent
   spec:
-    description: ArgoCD MCP Server
+    description: GitHub MCP Server
     config:
       stdio:
         args:
-        - run
-        - -i
-        - --rm
-        - hashicorp/terraform-mcp-server:0.1.0
-        command: docker
+        - -y
+        - "@modelcontextprotocol/server-github"
+        command: npx
