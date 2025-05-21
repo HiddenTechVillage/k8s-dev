@@ -1,0 +1,26 @@
+apiVersion: agents.kagent.dev/v1alpha1
+kind: Tool
+metadata:
+  name: mcp-atlassian
+  namespace: kagent  # Adjust to your namespace if different
+spec:
+  title: "MCP Atlassian"
+  description: "Tool for managing Confluence pages and Jira issues"
+  container:
+    image: ghcr.io/sooperset/mcp-atlassian:latest
+    args: ["stdio"]  # Run in stdio mode
+    env:
+    - name: CONFLUENCE_URL
+      value: "https://chrismatcham.atlassian.net/wiki"
+    - name: JIRA_URL
+      value: "https://chrismatcham.atlassian.net"
+    - name: CONFLUENCE_API_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: mcp-atlassian
+          key: confluence-api-token
+    - name: JIRA_API_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: mcp-atlassian
+          key: jira-api-token
