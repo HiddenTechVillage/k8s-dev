@@ -13,21 +13,11 @@ spec:
       command: npx
       env:
         ARGOCD_BASE_URL: "https://argocd-server.argocd.svc.cluster.local"
-        # not ideal way to pass this token
-        ARGOCD_API_TOKEN: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJob21lcGFnZTphcGlLZXkiLCJuYmYiOjE3NDYwNjIyNDUsImlhdCI6MTc0NjA2MjI0NSwianRpIjoiYzM0MjA1ZDAtZTk2OS00YmRmLTg3MTEtNDljMjNkZDQ5NTUyIn0.1n5WZQs5_dzRYO1cpKEd5Jq2ndoBcMu6_8MnO6prK1c"
         NODE_TLS_REJECT_UNAUTHORIZED: "0"
-      # env:
-      # - name: CONFLUENCE_URL
-      #   value: "https://chrismatcham.atlassian.net/wiki"
-      # - name: JIRA_URL
-      #   value: "https://chrismatcham.atlassian.net"
-      # - name: CONFLUENCE_API_TOKEN
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: mcp-atlassian
-      #       key: confluence-api-token
-      # - name: JIRA_API_TOKEN
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: mcp-atlassian
-      #       key: jira-api-token
+      argsFrom:
+      - name: ARGOCD_API_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: mcp-argocd
+            key: argocd-api-token
+            prefix: --ARGOCD_API_TOKEN=

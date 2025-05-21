@@ -2,28 +2,29 @@ apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
   name: mcp-atlassian
-  namespace: kagent        
+  namespace: kagent
 spec:
-  description: ArgoCD MCP Server
+  description: Atlassian MCP Server for Jira and Confluence
   config:
-    stdio:
-      args:
-      - phuc-nt/mcp-atlassian-server@2.1.1
-      - stdio
-      command: npx
-      env:
-        test: test
-      # - name: CONFLUENCE_URL
-      #   value: "https://chrismatcham.atlassian.net/wiki"
-      # - name: JIRA_URL
-      #   value: "https://chrismatcham.atlassian.net"
-      # - name: CONFLUENCE_API_TOKEN
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: mcp-atlassian
-      #       key: confluence-api-token
-      # - name: JIRA_API_TOKEN
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: mcp-atlassian
-      #       key: jira-api-token
+    sse:
+      url: https://mcp.atlassian.com/v1/sse
+    command: mcp-atlassian
+    args:
+      - --jira-url
+      - https://chrismatcham.atlassian.net
+      - --confluence-url
+      - https://chrismatcham.atlassian.net/wiki
+    argsFrom:
+      - name: CONFLUENCE_API_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: mcp-atlassian
+            prefix: --confluence-token=
+            key: confluence-api-token
+      - name: JIRA_API_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: mcp-atlassian
+            prefix: --jira-token=
+            key: jira-api-token
+    disabled: false
