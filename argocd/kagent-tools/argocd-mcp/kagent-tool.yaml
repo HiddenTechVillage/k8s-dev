@@ -14,10 +14,10 @@ spec:
       env:
         ARGOCD_BASE_URL: "https://argocd-server.argocd.svc.cluster.local"
         NODE_TLS_REJECT_UNAUTHORIZED: "0"
-      argsFrom:
-      - name: ARGOCD_API_TOKEN
-        valueFrom:
-          secretKeyRef:
-            name: mcp-argocd
-            key: argocd-api-token
-            prefix: --ARGOCD_API_TOKEN=
+      # argsFrom:
+      # - name: ARGOCD_API_TOKEN
+      #   valueFrom:
+      #     secretKeyRef:
+      #       name: mcp-argocd
+      #       key: argocd-api-token
+      #       prefix: --ARGOCD_API_TOKEN=
