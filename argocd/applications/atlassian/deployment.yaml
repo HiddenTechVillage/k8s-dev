@@ -18,7 +18,6 @@ spec:
       - name: mcp-atlassian
         image: ghcr.io/sooperset/mcp-atlassian:latest
         imagePullPolicy: Always
-        args: ["stdio"]  # Run in stdio mode 
         env:
         - name: CONFLUENCE_URL
           value: "https://chrismatcham.atlassian.net/wiki"
