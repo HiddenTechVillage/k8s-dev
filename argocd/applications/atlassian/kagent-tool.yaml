@@ -8,7 +8,7 @@ spec:
   config:
     stdio:
       args: ["stdio"]
-      command: ["npx", "mcp-atlassian@latest"]
+      command: "npx mcp-atlassian@latest"
       # env:
       # - name: CONFLUENCE_URL
       #   value: "https://chrismatcham.atlassian.net/wiki"
