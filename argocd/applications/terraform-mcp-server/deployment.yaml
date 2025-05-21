@@ -15,7 +15,9 @@ spec:
     spec:
       containers:
       - name: terraform-mcp-server
-        image: matcham89/terraform-mcp-server:latest 
+        image: matcham89/terraform-mcp-server:latest
+        command: ["terraform-mcp-server"]
+        args: ["--listen", "0.0.0.0:8080"]
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
