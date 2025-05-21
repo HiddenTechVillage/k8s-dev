@@ -16,13 +16,20 @@ spec:
     spec:
       containers:
       - name: mcp-atlassian
-        image: ghcr.io/sooperset/mcp-atlassian:latest
+        image: node:18-alpine
         imagePullPolicy: Always
+        command: ["/bin/sh", "-c"]
+        args: ["npm install -g mcp-atlassian && mcp-atlassian stdio"] 
         env:
         - name: CONFLUENCE_URL
           value: "https://chrismatcham.atlassian.net/wiki"
         - name: JIRA_URL
           value: "https://chrismatcham.atlassian.net"
+        - name: CONFLUENCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mcp-atlassian
+              key: confluence-username
         - name: CONFLUENCE_API_TOKEN
           valueFrom:
             secretKeyRef:
