@@ -64,6 +64,4 @@ spec:
   - builtin:
       name: kagent.tools.k8s.GetResources
     type: Builtin
-  - builtin:
-      name: kagent.tools.k8s.DeleteResource
-    type: Builtin
+
