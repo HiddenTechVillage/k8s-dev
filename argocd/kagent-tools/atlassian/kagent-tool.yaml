@@ -2,7 +2,7 @@ apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
   name: mcp-atlassian
-  namespace: kagent  # Adjust to your namespace if different
+  namespace: kagent
 spec:
   description: Jira Test
   config:

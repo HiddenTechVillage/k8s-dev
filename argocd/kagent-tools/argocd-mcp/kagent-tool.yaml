@@ -2,7 +2,7 @@ apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
   name: mcp-argocd
-  namespace: kagent  # Adjust to your namespace if different
+  namespace: kagent
 spec:
   description: ArgoCD MCP
   config:
