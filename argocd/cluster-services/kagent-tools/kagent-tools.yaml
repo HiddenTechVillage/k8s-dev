@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mcp-atlassian
+  name: kagent-tools
   namespace: argocd
 spec:
   project: default
   sources:
       - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
         targetRevision: HEAD
-        path: argocd/applications/atlassian
+        path: argocd/kagent-tools
         directory:
           recurse: true
   destination:
