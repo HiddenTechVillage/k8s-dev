@@ -80,9 +80,9 @@ spec:
   #     name: mcptool-StdioMcpToolAdapter-create_application
   #   type: Builtin
 
-  # - builtin:
-  #     name: mcptool-StdioMcpToolAdapter-delete_application
-  #   type: Builtin
+  - builtin:
+      name: mcptool-StdioMcpToolAdapter-delete_application
+    type: Builtin
 
   # - builtin:
   #     name: mcptool-StdioMcpToolAdapter-update_application
