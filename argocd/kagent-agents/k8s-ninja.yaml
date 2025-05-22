@@ -67,43 +67,26 @@ spec:
       name: kagent.tools.k8s.GetResources
     type: Builtin
   
+
+
   # # ArgoCD Tools
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-create_application
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-get_application
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-run_resource_action
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-get_resource_actions
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-get_resource_events
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-get_application_events
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-get_application_workload_logs
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-get_application_managed_resources
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-get_application_resource_tree
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-sync_application
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-delete_application
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-update_application
-    type: Builtin
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-list_applications
-    type: Builtin
+  - mcpServer:
+      toolNames:
+      - create_application
+      toolServer: mcp-argocd-gitops
+    type: McpServer
+
+  # - builtin:
+  #     name: mcptool-StdioMcpToolAdapter-create_application
+  #   type: Builtin
+
+  # - builtin:
+  #     name: mcptool-StdioMcpToolAdapter-delete_application
+  #   type: Builtin
+
+  # - builtin:
+  #     name: mcptool-StdioMcpToolAdapter-update_application
+  #   type: Builtin
+  # - builtin:
+  #     name: mcptool-StdioMcpToolAdapter-list_applications
+  #   type: Builtin
