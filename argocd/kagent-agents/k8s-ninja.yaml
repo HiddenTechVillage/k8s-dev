@@ -76,13 +76,37 @@ spec:
       toolServer: mcp-argocd-gitops
     type: McpServer
 
+  - mcpServer:
+      toolNames:
+      - get_application
+      toolServer: mcp-argocd-gitops
+    type: McpServer
+
+  - mcpServer:
+      toolNames:
+      - update_application
+      toolServer: mcp-argocd-gitops
+    type: McpServer
+
+  - mcpServer:
+      toolNames:
+      - sync_application
+      toolServer: mcp-argocd-gitops
+    type: McpServer
+
+
+  - mcpServer:
+      toolNames:
+      - delete_application
+      toolServer: mcp-argocd-gitops
+    type: McpServer
   # - builtin:
   #     name: mcptool-StdioMcpToolAdapter-create_application
   #   type: Builtin
 
-  - builtin:
-      name: mcptool-StdioMcpToolAdapter-delete_application
-    type: Builtin
+  # - builtin:
+  #     name: mcptool-StdioMcpToolAdapter-delete_application
+  #   type: Builtin
 
   # - builtin:
   #     name: mcptool-StdioMcpToolAdapter-update_application
