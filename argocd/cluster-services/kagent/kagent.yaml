@@ -12,13 +12,6 @@ spec:
     - repoURL: https://github.com/Matcham89/kagent.git
       path: helm/kagent
       targetRevision: HEAD
-      helm:
-        values: |
-          providers:
-            default: openAI
-            openAI:
-              provider: OpenAI
-              model: "gpt-4.1-mini"
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
       targetRevision: 0.3.8
