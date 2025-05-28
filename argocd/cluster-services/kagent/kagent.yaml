@@ -21,7 +21,7 @@ spec:
               model: "gpt-4.1-mini"
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
-      targetRevision: 0.3.4
+      targetRevision: 0.3.8
   syncPolicy:
     syncOptions:
       - CreateNamespace=true

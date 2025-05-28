@@ -2,39 +2,9 @@
 replicaCount: 1
 
 global:
-  tag: "0.3.1"
+  tag: "0.3.8"
 
 # https://kagent.dev/docs/getting-started/configuring-providers
-providers:
-  default: openAI
-  openAI:
-    provider: OpenAI
-    model: "gpt-4.1-mini"
-    apiKeySecretRef: kagent-openai
-    apiKeySecretKey: OPENAI_API_KEY
-    apiKey: ""
-  ollama:
-    provider: Ollama
-    model: "llama3.2"
-    config:
-      host: host.docker.internal:11434
-  anthropic:
-    provider: Anthropic
-    model: "claude-3-sonnet-20240229"
-    apiKeySecretRef: kagent-anthropic
-    apiKeySecretKey: ANTHROPIC_API_KEY
-    apiKey: ""
-  azureOpenAI:
-    provider: AzureOpenAI
-    model: "gpt-4.1-mini"
-    apiKeySecretRef: kagent-azure-openai
-    apiKeySecretKey: AZUREOPENAI_API_KEY
-    apiKey: ""
-    config:
-      apiVersion: "2023-05-15"
-      azureAdToken: ""
-      azureDeployment: ""
-      azureEndpoint: ""
 
 controller:
   loglevel: "info"
