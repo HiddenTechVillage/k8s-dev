@@ -19,8 +19,6 @@ spec:
             openAI:
               provider: OpenAI
               model: "gpt-4.1-mini"
-              apiKeySecretRef: kagent-openai
-              apiKeySecretKey: OPENAI_API_KEY
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
       targetRevision: 0.3.4
