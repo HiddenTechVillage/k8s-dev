@@ -1,29 +1,3 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kagent 
-  namespace: argocd
-spec:
-  project: default
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: kagent
-  sources:
-    - repoURL: https://github.com/Matcham89/kagent.git
-      path: helm/kagent
-      targetRevision: HEAD
-    - repoURL: ghcr.io/kagent-dev/kagent/helm
-      chart: kagent-crds
-      targetRevision: 0.3.8
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-    automated:
-      selfHeal: true
-      prune: true
-
-# # ---
-
 # apiVersion: argoproj.io/v1alpha1
 # kind: Application
 # metadata:
@@ -35,18 +9,9 @@ spec:
 #     server: "https://kubernetes.default.svc"
 #     namespace: kagent
 #   sources:
-#     - repoURL: ghcr.io/kagent-dev/kagent/helm
-#       chart: kagent
-#       targetRevision: 0.3.8
-#       helm:
-#         values: |
-#           providers:
-#             default: openAI
-#             openAI:
-#               provider: OpenAI
-#               model: "gpt-4.1-mini"
-#               apiKeySecretRef: kagent-openai
-#               apiKeySecretKey: OPENAI_API_KEY
+#     - repoURL: https://github.com/Matcham89/kagent.git
+#       path: helm/kagent
+#       targetRevision: HEAD
 #     - repoURL: ghcr.io/kagent-dev/kagent/helm
 #       chart: kagent-crds
 #       targetRevision: 0.3.8
@@ -56,3 +21,38 @@ spec:
 #     automated:
 #       selfHeal: true
 #       prune: true
+
+# # ---
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kagent 
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: kagent
+  sources:
+    - repoURL: ghcr.io/kagent-dev/kagent/helm
+      chart: kagent
+      targetRevision: 0.3.12
+      helm:
+        values: |
+          providers:
+            default: openAI
+            openAI:
+              provider: OpenAI
+              model: "gpt-4.1-mini"
+              apiKeySecretRef: kagent-openai
+              apiKeySecretKey: OPENAI_API_KEY
+    - repoURL: ghcr.io/kagent-dev/kagent/helm
+      chart: kagent-crds
+      targetRevision: 0.3.8
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
