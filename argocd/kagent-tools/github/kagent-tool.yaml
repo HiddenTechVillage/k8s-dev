@@ -1,7 +1,7 @@
 apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
-  name: mcp-github-gitops
+  name: mcp-github
   namespace: kagent
 spec:
   description: GitHub MCP Server

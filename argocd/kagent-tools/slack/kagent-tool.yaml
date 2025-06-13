@@ -1,7 +1,7 @@
 apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
-  name: mcp-slack-gitops
+  name: mcp-slack
   namespace: kagent
 spec:
   description: Slack MCP Server

@@ -1,7 +1,7 @@
 apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
-  name: mcp-notion-gitops
+  name: mcp-notion
   namespace: kagent
 spec:
   description: notion MCP Server
