@@ -8,7 +8,7 @@ spec:
   config:
     stdio:
       args:
-      - "-y"
+      - -y
       - "@notionhq/notion-mcp-server"
       command: npx
       env:
