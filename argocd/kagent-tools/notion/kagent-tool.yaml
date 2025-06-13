@@ -11,3 +11,5 @@ spec:
       args:
         - -y
         - "@notionhq/notion-mcp-server"
+      env:
+        OPENAPI_MCP_HEADERS: "this is a test header"
