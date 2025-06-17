@@ -12,4 +12,4 @@ spec:
         - -y
         - "@notionhq/notion-mcp-server"
       env:
-        OPENAPI_MCP_HEADERS: '{"Authorization":"Bearer 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","Notion-Version":"2022-06-28"}'
+        OPENAPI_MCP_HEADERS: '{\"Authorization\":\"Bearer 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\",\"Notion-Version\":\"2022-06-28\"}'
