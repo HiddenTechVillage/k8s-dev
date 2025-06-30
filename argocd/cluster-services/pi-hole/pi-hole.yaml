@@ -9,7 +9,7 @@ spec:
     - repoURL: https://mojo2600.github.io/pihole-kubernetes/
       chart: pihole
       targetRevision: 2.22.0
-    - repoURL: https://github.com/Matcham89/kagent.git
+    - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
       path: helm/pi-hole
       targetRevision: HEAD
   destination:

@@ -127,9 +127,6 @@ serviceWeb:
 
   # -- `spec.externalTrafficPolicy` for the web interface Service
   externalTrafficPolicy: Local
-
-  # -- A fixed `spec.loadBalancerIP` for the web interface Service
-  loadBalancerIP: ""
   # -- A fixed `spec.loadBalancerIP` for the IPv6 web interface Service
   loadBalancerIPv6: ""
   # -- `spec.loadBalancerClass` for the web interface Service. Only used if type is LoadBalancer.
