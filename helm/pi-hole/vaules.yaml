@@ -4,7 +4,7 @@ ingress:
   enabled: true
 
   # -- Specify an ingressClassName
-  # ingressClassName: nginx
+  ingressClassName: nginx
 
   # -- Annotations for the ingress
   annotations: {}
@@ -14,7 +14,7 @@ ingress:
   pathType: ImplementationSpecific
   hosts:
     # virtualHost (default value is pi.hole) will be appended to the hosts
-    - chart-example.local
+    - cpihole.chris
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
