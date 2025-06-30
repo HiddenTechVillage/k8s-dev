@@ -27,29 +27,29 @@ data:
   services.yaml: |
     - CI / CD:
         - ArgoCD:
-            href: https://argocd.local:30443/
+            href: https://argocd.dev/
             widget:
               type: argocd
-              url: https://argocd-server.argocd.svc.cluster.local:443/
+              url: https://argocd-server.argocd.svc.cluster.dev:443/
               key: "{{ .argocdhomepage | toString }}"
     - Apps:
         - Test Application:
-            href: https://testapp.local:30443/
+            href: https://testapp.dev/
     - Monitoring:
         - Grafana:
-            href: https://grafana.local:30443/
+            href: https://grafana.dev/
             widget:
               type: grafana
-              url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80/
+              url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.dev:80/
               username: grafana-homepage
               password: "{{ .grafanahomepage | toString }}"
         - Kubernetes Dashboard:
-            href: https://kubernetes-dashboard.local:30443/
+            href: https://kubernetes-dashboard.dev/
         - Uptime Kuma:
-            href: https://uptime-kuma.local:30443/
+            href: https://uptime-kuma.dev/
             widget:
               type: uptimekuma
-              url: http://uptime-kuma.monitoring.svc.cluster.local:3001
+              url: http://uptime-kuma.monitoring.svc.cluster.dev:3001
               slug: k8s-dev
   widgets.yaml: |
     - kubernetes:

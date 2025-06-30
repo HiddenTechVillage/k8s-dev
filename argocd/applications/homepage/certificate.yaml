@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: homepage-tls
   dnsNames:
-    - homepage.local
+    - homepage.dev
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer
