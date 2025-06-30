@@ -9,6 +9,11 @@ spec:
     repoURL: https://mojo2600.github.io/pihole-kubernetes/
     chart: pihole
     targetRevision: 2.22.0
+    helm:
+      values: |
+        serviceWeb:
+          type: LoadBalancer
+          loadBalancerIP: 192.168.1.53
   destination:
     server: https://kubernetes.default.svc
     namespace: pihole
