@@ -5,13 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-    - repoURL: https://mojo2600.github.io/pihole-kubernetes/
-      chart: pihole
-      targetRevision: 2.22.0
-    - repoURL: https://github.com/HiddenTechVillage/k8s-dev.git
-      path: helm/pi-hole
-      targetRevision: HEAD
+  source:
+    repoURL: https://mojo2600.github.io/pihole-kubernetes/
+    chart: pihole
+    targetRevision: 2.22.0
   destination:
     server: https://kubernetes.default.svc
     namespace: pihole
