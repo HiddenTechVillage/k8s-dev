@@ -1,22 +1,23 @@
-# -- Configuration for the Ingress
-ingress:
-  # -- Generate a Ingress resource
-  enabled: true
+pihole: 
+ # -- Configuration for the Ingress
+  ingress:
+    # -- Generate a Ingress resource
+    enabled: true
 
-  # -- Specify an ingressClassName
-  ingressClassName: nginx
+    # -- Specify an ingressClassName
+    ingressClassName: nginx
 
-  # -- Annotations for the ingress
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  path: /
-  pathType: ImplementationSpecific
-  hosts:
-    # virtualHost (default value is pi.hole) will be appended to the hosts
-    - cpihole.chris
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #     #- virtualHost (default value is pi.hole) will be appended to the hosts
-  #    
+    # -- Annotations for the ingress
+    annotations: {}
+      # kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: "true"
+    path: /
+    pathType: ImplementationSpecific
+    hosts:
+      # virtualHost (default value is pi.hole) will be appended to the hosts
+      - cpihole.chris
+    tls: []
+    #  - secretName: chart-example-tls
+    #    hosts:
+    #     #- virtualHost (default value is pi.hole) will be appended to the hosts
+    #    
