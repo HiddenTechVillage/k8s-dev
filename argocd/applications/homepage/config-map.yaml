@@ -30,7 +30,7 @@ data:
             href: https://argocd.chris/
             widget:
               type: argocd
-              url: https://argocd-server.argocd.svc.cluster.chris:443/
+              url: https://argocd-server.argocd.svc.cluster.local:443/
               key: "{{ .argocdhomepage | toString }}"
     - Apps:
         - Test Application:
@@ -40,16 +40,16 @@ data:
             href: https://grafana.chris/
             widget:
               type: grafana
-              url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.chris:80/
+              url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80/
               username: grafana-homepage
               password: "{{ .grafanahomepage | toString }}"
         - Kubernetes Dashboard:
-            href: https://kubernetes-dashboard.chris/
+            href: https://kubernetes-dashboard.local:30443/
         - Uptime Kuma:
             href: https://uptime-kuma.chris/
             widget:
               type: uptimekuma
-              url: http://uptime-kuma.monitoring.svc.cluster.chris:3001
+              url: http://uptime-kuma.monitoring.svc.cluster.local:3001
               slug: k8s-dev
   widgets.yaml: |
     - kubernetes:
