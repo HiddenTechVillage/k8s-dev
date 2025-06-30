@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: pi-hole-tls-certs
-  namespace: default
+  namespace: pihole
 spec:
   secretName: pi-hole-tls-certs
   dnsNames:

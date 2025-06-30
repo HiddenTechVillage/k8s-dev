@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: pi-hole-ingress
-  namespace: default
+  namespace: pihole
   annotations:
     cert-manager.io/cluster-issuer: ca-issuer
 spec:
