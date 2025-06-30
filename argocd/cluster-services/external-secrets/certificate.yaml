@@ -5,9 +5,9 @@ metadata:
   namespace: external-secrets
 spec:
   secretName: bitwarden-tls-certs
-  commonName: bitwarden-sdk-server.external-secrets.svc.cluster.local
+  commonName: bitwarden-sdk-server.external-secrets.svc.cluster.chris
   dnsNames:
-    - bitwarden-sdk-server.external-secrets.svc.cluster.local
+    - bitwarden-sdk-server.external-secrets.svc.cluster.chris
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer
