@@ -12,7 +12,7 @@ spec:
       - stdio
       command: npx
       env:
-        ARGOCD_BASE_URL: "https://argocd-server.argocd.svc.cluster.dev"
+        ARGOCD_BASE_URL: "https://argocd-server.argocd.svc.cluster.local"
         NODE_TLS_REJECT_UNAUTHORIZED: "0"
         # not ideal method to pass token
         ARGOCD_API_TOKEN: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhcmdvY2QtbWNwOmFwaUtleSIsIm5iZiI6MTc0Njc5ODkxNSwiaWF0IjoxNzQ2Nzk4OTE1LCJqdGkiOiI4OTU2MWY4My0xZmI5LTRlZmMtOTMyNS05MzkzMTRlMmE1MGUifQ.hiQls7T9Ie4VeD7uzQLuCA7p_h1IuClhX5Z3LrtJVHo"

@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: kagent-tls-certs
   dnsNames:
-    - kagent.dev
+    - kagent.local
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer
