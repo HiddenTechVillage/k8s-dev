@@ -18,11 +18,9 @@ spec:
         controller:
           scope:
             enabled: false
-          service:
-            type: NodePort
-            nodePorts:
-              http: 30080
-              https: 30443
+        service:
+          type: LoadBalancer
+          loadBalancerIP: 192.168.1.52
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
