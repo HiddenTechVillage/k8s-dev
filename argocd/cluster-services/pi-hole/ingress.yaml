@@ -15,7 +15,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: pi-hole
+            name: pihole-web
             port:
               number: 443
               
