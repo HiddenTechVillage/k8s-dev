@@ -5,13 +5,13 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://mojo2600.github.io/pihole-kubernetes/
-    chart: pihole
-    targetRevision: 2.22.0
-    helm:
-      valueFiles:
-        - https://github.com/HiddenTechVillage/k8s-dev/blob/main/argocd/cluster-services/pi-hole/vaules.yaml
+  sources:
+    - repoURL: https://mojo2600.github.io/pihole-kubernetes/
+      chart: pihole
+      targetRevision: 2.22.0
+    - repoURL: https://github.com/Matcham89/kagent.git
+      path: argocd/cluster-services/pi-hole/vaules
+      targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: pihole
