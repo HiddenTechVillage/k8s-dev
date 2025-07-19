@@ -14,6 +14,14 @@ spec:
         serviceWeb:
           type: LoadBalancer
           loadBalancerIP: 192.168.1.53
+        admin:
+          # -- If set to false admin password will be disabled, adminPassword specified above and the pre-existing secret (if specified) will be ignored.
+          enabled: true
+          # -- Specify an existing secret to use as admin password
+          existingSecret: "pi-hole"
+          # -- Specify the key inside the secret to use
+          passwordKey: "PI_HOLE_ADMIN_PASSWORD"
+
   destination:
     server: https://kubernetes.default.svc
     namespace: pihole
