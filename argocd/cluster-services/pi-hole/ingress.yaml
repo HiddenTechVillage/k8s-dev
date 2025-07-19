@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pi-hole-ingress
+  namespace: pihole
+  annotations:
+    cert-manager.io/cluster-issuer: ca-issuer
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: pi-hole.localdev
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pihole-web
+            port:
+              number: 443
+              
+  tls:
+  - hosts:
+    - pi-hole.localdev
+    secretName: pi-hole-tls-certs

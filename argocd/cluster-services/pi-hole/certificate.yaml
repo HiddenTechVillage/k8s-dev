@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: pi-hole-tls-certs
+  namespace: pihole
+spec:
+  secretName: pi-hole-tls-certs
+  dnsNames:
+    - pi-hole.localdev
+  issuerRef:
+    name: ca-issuer
+    kind: ClusterIssuer
