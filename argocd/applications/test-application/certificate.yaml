@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: test-application-tls
   dnsNames:
-    - testapp.chris
+    - testapp.localdev
   issuerRef:
     name: ca-issuer
     kind: ClusterIssuer

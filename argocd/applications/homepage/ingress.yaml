@@ -16,7 +16,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: homepage.chris
+  - host: homepage.localdev
     http:
       paths:
       - path: "/"
@@ -28,5 +28,5 @@ spec:
               number: 3000
   tls:
   - hosts:
-    - homepage.chris
+    - homepage.localdev
     secretName: homepage-tls

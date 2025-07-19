@@ -27,17 +27,17 @@ data:
   services.yaml: |
     - CI / CD:
         - ArgoCD:
-            href: https://argocd.chris/
+            href: https://argocd.localdev/
             widget:
               type: argocd
               url: https://argocd-server.argocd.svc.cluster.local:443/
               key: "{{ .argocdhomepage | toString }}"
     - Apps:
         - Test Application:
-            href: https://testapp.chris/
+            href: https://testapp.localdev/
     - Monitoring:
         - Grafana:
-            href: https://grafana.chris/
+            href: https://grafana.localdev/
             widget:
               type: grafana
               url: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local:80/
@@ -46,7 +46,7 @@ data:
         - Kubernetes Dashboard:
             href: https://kubernetes-dashboard.local:30443/
         - Uptime Kuma:
-            href: https://uptime-kuma.chris/
+            href: https://uptime-kuma.localdev/
             widget:
               type: uptimekuma
               url: http://uptime-kuma.monitoring.svc.cluster.local:3001
