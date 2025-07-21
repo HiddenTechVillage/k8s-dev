@@ -45,27 +45,27 @@ spec:
     
   tools:
   # Kubernetes Tools
-  - builtin:
+  - Agent:
       name: kagent.tools.k8s.ApplyManifest
-    type: Builtin
-  - builtin:
+    type: Agent
+  - Agent:
       name: kagent.tools.k8s.GetPodLogs
-    type: Builtin
-  - builtin:
+    type: Agent
+  - Agent:
       name: kagent.tools.k8s.Scale
-    type: Builtin
-  - builtin:
+    type: Agent
+  - Agent:
       name: kagent.tools.k8s.Rollout
-    type: Builtin
-  - builtin:
+    type: Agent
+  - Agent:
       name: kagent.tools.k8s.LabelResource
-    type: Builtin
-  - builtin:
+    type: Agent
+  - Agent:
       name: kagent.tools.k8s.RemoveLabel
-    type: Builtin
-  - builtin:
+    type: Agent
+  - Agent:
       name: kagent.tools.k8s.GetResources
-    type: Builtin
+    type: Agent
   
 
 
@@ -100,17 +100,17 @@ spec:
       - delete_application
       toolServer: mcp-argocd
     type: McpServer
-  # - builtin:
+  # - Agent:
   #     name: mcptool-StdioMcpToolAdapter-create_application
-  #   type: Builtin
+  #   type: Agent
 
-  # - builtin:
+  # - Agent:
   #     name: mcptool-StdioMcpToolAdapter-delete_application
-  #   type: Builtin
+  #   type: Agent
 
-  # - builtin:
+  # - Agent:
   #     name: mcptool-StdioMcpToolAdapter-update_application
-  #   type: Builtin
-  # - builtin:
+  #   type: Agent
+  # - Agent:
   #     name: mcptool-StdioMcpToolAdapter-list_applications
-  #   type: Builtin
+  #   type: Agent
