@@ -9,4 +9,4 @@ spec:
   - name: https
     protocol: TCP
     port: 443
-    targetPort: 9283
+    targetPort: 5000

@@ -16,6 +16,6 @@ spec:
       - name: grocy
         image: linuxserver/grocy:4.5.0
         ports:
-        - containerPort: 9283
+        - containerPort: 5000
 
 
