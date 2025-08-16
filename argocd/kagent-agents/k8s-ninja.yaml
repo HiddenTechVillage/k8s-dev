@@ -59,8 +59,6 @@ spec:
       - k8s_scale
       - k8s_rollout
 
-
-
   # # ArgoCD Tools
   - mcpServer:
       toolNames:
