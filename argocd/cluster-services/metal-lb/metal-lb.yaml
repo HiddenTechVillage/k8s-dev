@@ -11,6 +11,12 @@ spec:
         path: argocd/applications/metal-lb
         directory:
           recurse: true
+      - repoURL: https://metallb.github.io/metallb
+        chart: metallb
+        targetRevision: 0.15.2
+        helm:
+          valueFiles:
+            - values.yaml
   destination:
       server: https://kubernetes.default.svc
       namespace: metallb-system
