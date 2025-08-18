@@ -29,10 +29,7 @@ spec:
     Summarize clearly.
   tools:
   - type: ToolServer
-    # reference the ToolServer by name/namespace
-    toolServer:
-      name: yt-kmcp
-      namespace: default
-    # optional: restrict to specific tools exposed by that server
+    name: yt-kmcp
+    namespace: default
     toolNames:
       - get_video_info
