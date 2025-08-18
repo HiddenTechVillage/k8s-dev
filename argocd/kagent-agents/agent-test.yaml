@@ -20,7 +20,7 @@ apiVersion: kagent.dev/v1alpha1
 kind: Agent
 metadata:
   name: yt-agent
-  namespace: default
+  namespace: kagent
 spec:
   description: Agent that calls the YouTube MCP tool.
   modelConfig: kagent/default-model-config
