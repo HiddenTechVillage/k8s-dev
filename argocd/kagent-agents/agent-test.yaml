@@ -41,7 +41,7 @@
 # Project: yt-kmcp
 # Framework: fastmcp-python
 apiVersion: kagent.dev/v1alpha2
-kind: MCPServers
+kind: mcpservers
 metadata:
   annotations:
     kmcp.dev/description: MCP server built with fastmcp-python
