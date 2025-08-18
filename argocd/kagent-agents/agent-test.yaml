@@ -3,7 +3,7 @@ apiVersion: kagent.dev/v1alpha1
 kind: ToolServer
 metadata:
   name: yt-kmcp
-  namespace: default
+  namespace: kagent
 spec:
   config:
     streamableHttp:
