@@ -5,14 +5,14 @@ metadata:
   name: yt-kmcp
   namespace: default
 spec:
-  description: YouTube MCP (Streamable HTTP via agent-gateway)
   config:
-    type: streamableHttp
     streamableHttp:
+      sseReadTimeout: 5m0s
+      timeout: 30s
       url: http://yt-kmcp-kagent.default.svc:3000/mcp
-      # optional timeouts/headers:
-      # timeout: 30s
-      # sseReadTimeout: 30s
+    type: streamableHttp
+  description: test server
+
 ---
 
 # agent-yt.yaml
