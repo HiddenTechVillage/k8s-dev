@@ -148,9 +148,6 @@ spec:
                   endpoint: http://host.docker.internal:4317
                   timeout: 15
                   insecure: true
-    - repoURL: ghcr.io/kagent-dev/kagent/helm
-      chart: kagent-crds
-      targetRevision: 0.5.5
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
