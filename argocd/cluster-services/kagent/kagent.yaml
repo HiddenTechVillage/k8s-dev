@@ -37,7 +37,7 @@ spec:
   sources:
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent
-      targetRevision: 0.5.5
+      targetRevision: 0.5.4
       helm:
         values: |
 
@@ -289,7 +289,7 @@ spec:
                   insecure: true
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
-      targetRevision: 0.5.5
+      targetRevision: 0.5.4
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
