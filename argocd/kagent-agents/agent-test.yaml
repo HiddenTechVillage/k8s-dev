@@ -64,5 +64,20 @@ spec:
     port: 3000
     secretRefs:
     - name: yt-kmcp-secrets-staging
+    envFrom:
+    - configMapRef:
+        name: yt-kmcp-config
   stdioTransport: {}
   transportType: stdio
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: yt-kmcp-config
+  namespace: default
+data:
+  TRANSCRIPT_LANGS: "en,en-US,en-GB"
+  TRANSCRIPT_MIN_LEN: "80"
+  YTDLP_TIMEOUT: "60"
