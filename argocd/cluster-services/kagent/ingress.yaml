@@ -15,7 +15,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: kagent
+            name: kagent-ui
             port:
               number: 80
               
