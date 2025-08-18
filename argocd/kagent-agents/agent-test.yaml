@@ -27,9 +27,3 @@ spec:
   systemMessage: |-
     When given a YouTube URL or ID, call the "get_video_info" tool.
     Summarize clearly.
-  tools:
-  - type: ToolServer
-    name: yt-kmcp
-    namespace: default
-    toolNames:
-      - get_video_info
