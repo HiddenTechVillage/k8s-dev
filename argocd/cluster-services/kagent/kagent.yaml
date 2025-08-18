@@ -37,7 +37,7 @@ spec:
   sources:
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent
-      targetRevision: 0.5.5
+      targetRevision: 0.6.0
       helm:
         values: |
           providers:
