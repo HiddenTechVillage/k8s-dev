@@ -19,9 +19,3 @@ spec:
     # Response format
     - ALWAYS format your response as Markdown
     - Your response will include a summary of actions you took and an explanation of the result
-  tools:
-  - type: McpServer
-    mcpServer:
-      toolServer: yt-kmcp-kagent
-      toolNames:
-      - get_video_info
