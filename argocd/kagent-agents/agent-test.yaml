@@ -55,7 +55,6 @@ metadata:
     kmcp.dev/version: 0.1.0
   name: yt-kmcp
   namespace: default
-  resourceVersion: ""
 spec:
   deployment:
     args:
@@ -65,6 +64,5 @@ spec:
     port: 3000
     secretRefs:
     - name: yt-kmcp-secrets-staging
-
   stdioTransport: {}
   transportType: stdio
