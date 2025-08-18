@@ -1,5 +1,5 @@
 # yt-agent.yaml
-apiVersion: kagent.dev/v1alpha2
+apiVersion: kagent.dev/v1alpha1
 kind: Agent
 metadata:
   name: yt-agent
