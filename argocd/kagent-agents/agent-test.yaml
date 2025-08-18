@@ -9,11 +9,3 @@ spec:
   declarative:
     modelConfig: default-model-config
     systemMessage: "Be concise; call get_video_info(url_or_id) when asked."
-    tools:
-      - type: McpServer
-        mcpServer:
-          name: yt-kmcp-kagent      # your MCP Service name
-          kind: Service
-          # namespace: default      # include if the Service isn't in 'kagent'
-          toolNames:
-            - get_video_info
