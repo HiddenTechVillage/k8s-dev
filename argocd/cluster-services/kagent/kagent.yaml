@@ -45,7 +45,6 @@ spec:
             openAI:
               provider: OpenAI
               model: "gpt-4.1-mini"
-              apiKeySecretKey: OPENAI_API_KEY
             ollama:
               provider: Ollama
               model: "llama3.2"
