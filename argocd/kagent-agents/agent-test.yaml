@@ -55,6 +55,7 @@ metadata:
     kmcp.dev/version: 0.1.0
   name: yt-kmcp
   namespace: default
+  resourceVersion: ""
 spec:
   deployment:
     args:
