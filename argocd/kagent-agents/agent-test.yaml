@@ -64,9 +64,7 @@ spec:
     port: 3000
     secretRefs:
     - name: yt-kmcp-secrets-staging
-    envFrom:
-    - configMapRef:
-        name: yt-kmcp-config
+    - name: yt-kmcp-env-vars
   stdioTransport: {}
   transportType: stdio
 
