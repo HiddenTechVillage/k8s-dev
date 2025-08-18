@@ -75,6 +75,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: kagent
   annotations:
     kagent.dev/mcp-service-path: /mcp
     kagent.dev/mcp-service-port: "3000"
@@ -82,7 +83,6 @@ metadata:
     kagent.dev/mcp-service: "true"
 spec:
   name: yt-kmcp-kagent
-  namespace: kagent
   ports:
   - appProtocol: mcp
     name: mcp
