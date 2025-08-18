@@ -28,11 +28,11 @@ spec:
     When given a YouTube URL or ID, call the "get_video_info" tool.
     Summarize clearly.
   tools:
-    - type: ToolServer
-      # reference the ToolServer by name/namespace
-      toolServer:
-        name: yt-kmcp
-        namespace: default
-      # optional: restrict to specific tools exposed by that server
-      toolNames:
-        - get_video_info
+  - type: ToolServer
+    # reference the ToolServer by name/namespace
+    toolServer:
+      name: yt-kmcp
+      namespace: default
+    # optional: restrict to specific tools exposed by that server
+    toolNames:
+      - get_video_info
