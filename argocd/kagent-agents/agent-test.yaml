@@ -1,21 +1,25 @@
-apiVersion: kagent.dev/v1alpha1
+# yt-agent.yaml
+apiVersion: kagent.dev/v1alpha2
 kind: Agent
 metadata:
-  name: youtube-video-fetcher
-  namespace: kagent
+  name: yt-agent
+  namespace: default
 spec:
-  description: This agent can use a single tool to retrieve the contents of a webpage.
-  modelConfig: default-model-config
-  systemMessage: |-
-    You're a friendly and helpful agent that uses the fetch tool to retrieve webpage contents.
-
-    # Instructions
-
-    - If user question is unclear, ask for clarification before running any tools
-    - Always be helpful and friendly
-    - If you don't know how to answer the question DO NOT make things up
-      respond with "Sorry, I don't know how to answer that" and ask the user to further clarify the question
-
-    # Response format
-    - ALWAYS format your response as Markdown
-    - Your response will include a summary of actions you took and an explanation of the result
+  description: Agent that uses the YouTube MCP to fetch titles/descriptions/transcripts.
+  type: Declarative
+  declarative:
+    # Use an existing ModelConfig in your cluster. Adjust if yours has a different name.
+    modelConfig: default-model-config
+    systemMessage: |-
+      You are a pragmatic cloud engineer agent. When the user shares a YouTube URL or ID,
+      call the "get_video_info" MCP tool to fetch title, description, and (if available) transcript.
+      Summarize results clearly.
+    tools:
+      - type: McpServer
+        mcpServer:
+          # Reference the Service you created in step 1
+          kind: Service
+          name: yt-kmcp-kagent
+          # Only expose the tool(s) you want this agent to use
+          toolNames:
+            - get_video_info
