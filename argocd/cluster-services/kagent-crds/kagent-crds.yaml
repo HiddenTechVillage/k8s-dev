@@ -13,7 +13,7 @@ spec:
   sources:
     - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
-      targetRevision: 0.5.5
+      targetRevision: 0.6.0
       helm:
         releaseName: kagent-crds
   syncPolicy:
@@ -40,7 +40,7 @@ spec:
   sources:
     - repoURL: ghcr.io/kagent-dev/kmcp/helm
       chart: kagent-crds
-      targetRevision: 0.5.5
+      targetRevision: 0.6.0
       helm:
         releaseName: kagent-crds
   syncPolicy:
