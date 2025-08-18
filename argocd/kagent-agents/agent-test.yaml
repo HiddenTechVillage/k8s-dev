@@ -23,7 +23,7 @@ metadata:
   namespace: kagent
 spec:
   description: Agent that calls the YouTube MCP tool.
-  modelConfig: kagent/default-model-config
+  modelConfig: default-model-config
   systemMessage: |-
     When given a YouTube URL or ID, call the "get_video_info" tool.
     Summarize clearly.
