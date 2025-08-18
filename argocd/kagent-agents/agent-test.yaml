@@ -55,7 +55,7 @@ metadata:
     kmcp.dev/framework: fastmcp-python
     kmcp.dev/version: 0.1.0
   name: yt-kmcp
-  namespace: default
+  namespace: kagent
 spec:
   deployment:
     args:
