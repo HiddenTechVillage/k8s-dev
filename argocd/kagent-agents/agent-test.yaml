@@ -2,10 +2,9 @@ apiVersion: kagent.dev/v1alpha2
 kind: Agent
 metadata:
   name: yt-agent
-  namespace: kagent
+  namespace: default
 spec:
-  description: Uses yt-kmcp tool to fetch YouTube metadata/transcripts.
   type: Declarative
   declarative:
     modelConfig: default-model-config
-    systemMessage: "Be concise; call get_video_info(url_or_id) when asked."
+    systemMessage: "When given a YouTube URL/ID, c
