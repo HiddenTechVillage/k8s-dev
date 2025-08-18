@@ -1,19 +1,19 @@
-apiVersion: kagent.dev/v1alpha1
+apiVersion: kagent.dev/v1alpha2
 kind: Agent
 metadata:
   name: yt-agent
-  namespace: default
+  namespace: kagent
 spec:
-  description: Agent that calls the YouTube MCP tool to fetch title/description/transcript.
-  modelConfig: default-model-config
-  systemMessage: |-
-    You are a pragmatic cloud engineer agent. When given a YouTube URL or ID,
-    call the "get_video_info" MCP tool to return title, description, and transcript (if available).
-    Summarize clearly.
-  tools:
-    - type: McpServer
-      mcpServer:
-        kind: Service
-        name: yt-kmcp-kagent
-        toolNames:
-          - get_video_info
+  description: Uses yt-kmcp tool to fetch YouTube metadata/transcripts.
+  type: Declarative
+  declarative:
+    modelConfig: default-model-config
+    systemMessage: "Be concise; call get_video_info(url_or_id) when asked."
+    tools:
+      - type: McpServer
+        mcpServer:
+          name: yt-kmcp-kagent      # your MCP Service name
+          kind: Service
+          # namespace: default      # include if the Service isn't in 'kagent'
+          toolNames:
+            - get_video_info
