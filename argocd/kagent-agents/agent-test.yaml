@@ -7,4 +7,4 @@ spec:
   type: Declarative
   declarative:
     modelConfig: default-model-config
-    systemMessage: "When given a YouTube URL/ID, c
+    systemMessage: "When given a YouTube URL/ID"
