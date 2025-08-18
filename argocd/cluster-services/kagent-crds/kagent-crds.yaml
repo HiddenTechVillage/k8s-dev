@@ -42,7 +42,7 @@ spec:
       chart: kmcp-crds
       targetRevision: 0.1.5
       helm:
-        releaseName: kagent-crds
+        releaseName: kmcp-crds
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
