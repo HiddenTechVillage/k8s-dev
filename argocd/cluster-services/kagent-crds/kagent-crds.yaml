@@ -1,4 +1,4 @@
-# apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kagent-crds
@@ -25,7 +25,7 @@ spec:
 
 ---
 
-# apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kagent-mcpcrds
