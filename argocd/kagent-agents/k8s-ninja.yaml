@@ -59,34 +59,41 @@ spec:
       - k8s_scale
       - k8s_rollout
 
-  # # ArgoCD Tools
-  - mcpServer:
+  - type: McpServer
+    mcpServer:
+      name: yt-kmcp-kagent
+      kind: Service
       toolNames:
-      - create_application
-      toolServer: mcp-argocd
-    type: McpServer
+      - get_video_info
 
-  - mcpServer:
-      toolNames:
-      - get_application
-      toolServer: mcp-argocd
-    type: McpServer
+  # # # ArgoCD Tools
+  # - mcpServer:
+  #     toolNames:
+  #     - create_application
+  #     toolServer: mcp-argocd
+  #   type: McpServer
 
-  - mcpServer:
-      toolNames:
-      - update_application
-      toolServer: mcp-argocd
-    type: McpServer
+  # - mcpServer:
+  #     toolNames:
+  #     - get_application
+  #     toolServer: mcp-argocd
+  #   type: McpServer
 
-  - mcpServer:
-      toolNames:
-      - sync_application
-      toolServer: mcp-argocd
-    type: McpServer
+  # - mcpServer:
+  #     toolNames:
+  #     - update_application
+  #     toolServer: mcp-argocd
+  #   type: McpServer
+
+  # - mcpServer:
+  #     toolNames:
+  #     - sync_application
+  #     toolServer: mcp-argocd
+  #   type: McpServer
 
 
-  - mcpServer:
-      toolNames:
-      - delete_application
-      toolServer: mcp-argocd
-    type: McpServer
+  # - mcpServer:
+  #     toolNames:
+  #     - delete_application
+  #     toolServer: mcp-argocd
+  #   type: McpServer
