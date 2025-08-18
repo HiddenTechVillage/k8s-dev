@@ -1,10 +1,38 @@
-apiVersion: kagent.dev/v1alpha2
+# toolserver-yt.yaml
+apiVersion: kagent.dev/v1alpha1
+kind: ToolServer
+metadata:
+  name: yt-kmcp
+  namespace: default
+spec:
+  description: YouTube MCP (Streamable HTTP via agent-gateway)
+  config:
+    type: streamableHttp
+    streamableHttp:
+      url: http://yt-kmcp-kagent.default.svc:3000/mcp
+      # optional timeouts/headers:
+      # timeout: 30s
+      # sseReadTimeout: 30s
+---
+
+# agent-yt.yaml
+apiVersion: kagent.dev/v1alpha1
 kind: Agent
 metadata:
   name: yt-agent
   namespace: default
 spec:
-  type: Declarative
-  declarative:
-    modelConfig: default-model-config
-    systemMessage: "When given a YouTube URL/ID"
+  description: Agent that calls the YouTube MCP tool.
+  modelConfig: default-model-config
+  systemMessage: |-
+    When given a YouTube URL or ID, call the "get_video_info" tool.
+    Summarize clearly.
+  tools:
+    - type: ToolServer
+      # reference the ToolServer by name/namespace
+      toolServer:
+        name: yt-kmcp
+        namespace: default
+      # optional: restrict to specific tools exposed by that server
+      toolNames:
+        - get_video_info
