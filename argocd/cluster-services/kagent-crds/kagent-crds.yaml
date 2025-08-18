@@ -3,15 +3,19 @@ kind: Application
 metadata:
   name: kagent-crds
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-2"
 spec:
   project: default
   destination:
-    server: "https://kubernetes.default.svc"
-    namespace: kagent
+    server: https://kubernetes.default.svc
+    namespace: kagent    
   sources:
-    - repoURL: ghcr.io/kagent-dev/kagent/helm
+    - repoURL: oci://ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
       targetRevision: 0.5.5
+      helm:
+        releaseName: kagent-crds
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
