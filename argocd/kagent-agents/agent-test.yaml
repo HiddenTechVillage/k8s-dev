@@ -27,3 +27,9 @@ spec:
   systemMessage: |-
     When given a YouTube URL or ID, call the "get_video_info" tool.
     Summarize clearly.
+  tools:
+  - mcpServer:
+      toolNames:
+      - get_video_info
+      toolServer: yt-kmcp
+    type: McpServer
