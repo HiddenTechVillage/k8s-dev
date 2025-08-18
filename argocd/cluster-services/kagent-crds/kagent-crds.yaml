@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: kagent    
   sources:
-    - repoURL: oci://ghcr.io/kagent-dev/kagent/helm
+    - repoURL: ghcr.io/kagent-dev/kagent/helm
       chart: kagent-crds
       targetRevision: 0.5.5
       helm:
