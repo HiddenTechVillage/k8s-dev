@@ -61,8 +61,7 @@ spec:
 
   - type: McpServer
     mcpServer:
-      name: yt-kmcp-kagent
-      kind: Service
+      toolServer: yt-kmcp-kagent
       toolNames:
       - get_video_info
 
