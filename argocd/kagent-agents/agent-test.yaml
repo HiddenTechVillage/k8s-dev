@@ -9,7 +9,7 @@ spec:
     streamableHttp:
       sseReadTimeout: 5m0s
       timeout: 30s
-      url: http://yt-kmcp-kagent.kagent.svc:3000/mcp
+      url: http://yt-kmcp-kagent.default.svc:3000/mcp
     type: streamableHttp
   description: test server
 
