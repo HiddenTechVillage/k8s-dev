@@ -19,4 +19,4 @@ server:
     type: ClusterIP
     annotations:
       tailscale.com/expose: "true"
-      tailscale.com/hostname: "argocd.localdev"
+      tailscale.com/hostname: "argocd-dashboard"
