@@ -16,3 +16,9 @@ configs:
     policy.csv: |
       g, homepage, role:readonly
       g, argocd-mcp, role:admin
+  server:
+    service:
+      type: ClusterIP
+      annotations:
+        tailscale.com/expose: "true"
+        tailscale.com/hostname: "argocd"
