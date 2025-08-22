@@ -5079,6 +5079,9 @@ spec:
         - name: operator
           image: tailscale/k8s-operator:v1.86.2
           imagePullPolicy: Always
+          envFrom:
+          - secretRef:
+              name: operator-oauth
           env:
             - name: OPERATOR_INITIAL_TAGS
               value: tag:k8s-operator
