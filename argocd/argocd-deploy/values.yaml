@@ -1,6 +1,4 @@
 
-## Server
-Server:
 ## Argo Configs
 configs:
   # General Argo CD configuration. Any values you put under `.configs.cm` are passed to argocd-cm ConfigMap.
@@ -16,9 +14,9 @@ configs:
     policy.csv: |
       g, homepage, role:readonly
       g, argocd-mcp, role:admin
-  server:
-    service:
-      type: ClusterIP
-      annotations:
-        tailscale.com/expose: "true"
-        tailscale.com/hostname: "argocd"
+server:
+  service:
+    type: ClusterIP
+    annotations:
+      tailscale.com/expose: "true"
+      tailscale.com/hostname: "argocd.localdev"
