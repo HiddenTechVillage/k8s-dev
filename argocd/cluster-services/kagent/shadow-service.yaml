@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/managed-by: argocd
   annotations:
     tailscale.com/expose: "true"
-    tailscale.com/hostname: "kagent"
+    tailscale.com/hostname: "kagent-ui"
 spec:
   type: ClusterIP
   ports:
